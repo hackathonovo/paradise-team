@@ -11,30 +11,39 @@ import Alamofire
 
 protocol NetworkingServiceProtocol: class {
     
-    var parameters: [String: Any]! { get set }
-    
 }
 
 extension NetworkingServiceProtocol {
     
-    internal func loadStaticHeaders() {
-        
-        parameters = [:]
-        for (key, value) in AppConfig.staticHeaders {
-            parameters[key] = value
-        }
-    }
     
-    internal func makeRequest(with route: String = "", method: HTTPMethod = .get, encoding: ParameterEncoding = URLEncoding.default) {
+    internal func makeRequest(with route: String = "", method: HTTPMethod = .get, parameters: Parameters, encoding: ParameterEncoding = URLEncoding.default, headers customHeaders: HTTPHeaders? = nil, completion: @escaping (DataResponse<Any>)-> Void) {
         
-        let path = AppConfig.baseUrl + route   
+        let path = AppConfig.baseUrl + route
+        let headers = prepareHeaders(headers: customHeaders)
         
-        let req = request(path, method: method, parameters: parameters, encoding: encoding, headers: AppConfig.staticHeaders)
+        let req = request(path, method: method, parameters: nil, encoding: encoding, headers: headers)
             .responseString { response in
                 print(response)
+            }
+            .responseJSON { response in
+                
+                completion(response)
         }
         print(req)
     }
     
-    //TODO: One more argument, callback with model init (parse logic in init)
+    
+    
+    func prepareHeaders(headers customHeaders: HTTPHeaders?) -> HTTPHeaders {
+        
+        var headers = AppConfig.staticHeaders
+        
+        guard customHeaders != nil else { return headers }
+        
+        for (key, value) in customHeaders! {
+            headers[key] = value
+        }
+        
+        return headers
+    }
 }

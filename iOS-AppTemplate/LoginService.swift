@@ -12,17 +12,32 @@ import Foundation
 
 class LoginService: NetworkingServiceProtocol {
     
-    internal var parameters: [String: Any]!
-    
-    public init() {
-        loadStaticHeaders()
-    }
-    
-    public func login(username: String, password: String) {
+    public func login(username: String, password: String, onComplete: @escaping ()-> Void) {
         
-        loadStaticHeaders()
-        parameters.updateValue(username, forKey: "username")
-        parameters.updateValue(password, forKey: "password")
-        makeRequest(with: ApiPaths.login, method: .get)
+        var params = [
+            "username" : username,
+            "password": password
+        ]
+        
+        for (key, value) in AppConfig.clientSecret {
+            params[key] = value
+        }
+
+        makeRequest(with: ApiPaths.login, method: .get, parameters: params, completion: { response in
+            
+            switch response.result {
+                
+            case .success(let json):
+                
+                let token = Token(json: json)
+                let manager = UserDefaultsManager()
+                
+                manager.setValue(token.accessToken, forKey: "access_token")
+                onComplete()
+
+            case .failure(let error):
+                print(error)
+            }
+        })
     }
 }

@@ -19,6 +19,8 @@
 		4B4E533D1ECCAFB900539AE9 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4E533C1ECCAFB900539AE9 /* AppConfig.swift */; };
 		4B4E533F1ECCBAC700539AE9 /* ApiPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4E533E1ECCBAC700539AE9 /* ApiPaths.swift */; };
 		4B4E53411ECCDEBB00539AE9 /* NetworkingServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4E53401ECCDEBB00539AE9 /* NetworkingServiceProtocol.swift */; };
+		4B4E53451ECDB82B00539AE9 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4E53441ECDB82B00539AE9 /* Token.swift */; };
+		4B64DE091ECDF29F0042941F /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B64DE081ECDF29F0042941F /* UserDefaultsManager.swift */; };
 		B06B76A35D67BE544934C546 /* Pods_iOS_AppTemplateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C251434CDE936964A787E2 /* Pods_iOS_AppTemplateTests.framework */; };
 		DF27C0FE2F4B0BCD7A82A475 /* Pods_iOS_AppTemplateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABCFCB04F2F685FD813E555E /* Pods_iOS_AppTemplateUITests.framework */; };
 /* End PBXBuildFile section */
@@ -59,6 +61,8 @@
 		4B4E533C1ECCAFB900539AE9 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		4B4E533E1ECCBAC700539AE9 /* ApiPaths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiPaths.swift; sourceTree = "<group>"; };
 		4B4E53401ECCDEBB00539AE9 /* NetworkingServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingServiceProtocol.swift; sourceTree = "<group>"; };
+		4B4E53441ECDB82B00539AE9 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		4B64DE081ECDF29F0042941F /* UserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		86FD264CA470BA17F7936E13 /* Pods-iOS-AppTemplateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-AppTemplateTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-AppTemplateTests/Pods-iOS-AppTemplateTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A8C9F026DB0F1CF07D8FBEEB /* Pods-iOS-AppTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-AppTemplate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-AppTemplate/Pods-iOS-AppTemplate.debug.xcconfig"; sourceTree = "<group>"; };
 		ABCFCB04F2F685FD813E555E /* Pods_iOS_AppTemplateUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_AppTemplateUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,16 +139,13 @@
 		4B4E53091ECC6E3400539AE9 /* iOS-AppTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				4B4E533C1ECCAFB900539AE9 /* AppConfig.swift */,
-				4B4E53381ECC6E6E00539AE9 /* LoginService.swift */,
-				4B4E53401ECCDEBB00539AE9 /* NetworkingServiceProtocol.swift */,
-				4B4E533E1ECCBAC700539AE9 /* ApiPaths.swift */,
 				4B4E530A1ECC6E3400539AE9 /* AppDelegate.swift */,
+				4B4E533C1ECCAFB900539AE9 /* AppConfig.swift */,
+				4B4E53161ECC6E3400539AE9 /* Info.plist */,
 				4B4E530C1ECC6E3400539AE9 /* ViewController.swift */,
 				4B4E530E1ECC6E3400539AE9 /* Main.storyboard */,
-				4B4E53111ECC6E3400539AE9 /* Assets.xcassets */,
-				4B4E53131ECC6E3400539AE9 /* LaunchScreen.storyboard */,
-				4B4E53161ECC6E3400539AE9 /* Info.plist */,
+				4B4E53421ECD761F00539AE9 /* Services */,
+				4B4E53431ECD764F00539AE9 /* UI */,
 			);
 			path = "iOS-AppTemplate";
 			sourceTree = "<group>";
@@ -165,6 +166,43 @@
 				4B4E532C1ECC6E3400539AE9 /* Info.plist */,
 			);
 			path = "iOS-AppTemplateUITests";
+			sourceTree = "<group>";
+		};
+		4B4E53421ECD761F00539AE9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4B64DE081ECDF29F0042941F /* UserDefaultsManager.swift */,
+				4B4E53381ECC6E6E00539AE9 /* LoginService.swift */,
+				4B64DE0B1ECDF4740042941F /* Networking */,
+				4B64DE0A1ECDF4600042941F /* Models */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		4B4E53431ECD764F00539AE9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				4B4E53131ECC6E3400539AE9 /* LaunchScreen.storyboard */,
+				4B4E53111ECC6E3400539AE9 /* Assets.xcassets */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		4B64DE0A1ECDF4600042941F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4B4E53441ECDB82B00539AE9 /* Token.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		4B64DE0B1ECDF4740042941F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				4B4E533E1ECCBAC700539AE9 /* ApiPaths.swift */,
+				4B4E53401ECCDEBB00539AE9 /* NetworkingServiceProtocol.swift */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 		AAB65ACE34F704B75ABE28BA /* Frameworks */ = {
@@ -462,8 +500,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B4E530D1ECC6E3400539AE9 /* ViewController.swift in Sources */,
+				4B4E53451ECDB82B00539AE9 /* Token.swift in Sources */,
 				4B4E53411ECCDEBB00539AE9 /* NetworkingServiceProtocol.swift in Sources */,
 				4B4E533D1ECCAFB900539AE9 /* AppConfig.swift in Sources */,
+				4B64DE091ECDF29F0042941F /* UserDefaultsManager.swift in Sources */,
 				4B4E533F1ECCBAC700539AE9 /* ApiPaths.swift in Sources */,
 				4B4E53391ECC6E6E00539AE9 /* LoginService.swift in Sources */,
 				4B4E530B1ECC6E3400539AE9 /* AppDelegate.swift in Sources */,
