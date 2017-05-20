@@ -32,6 +32,9 @@
                                                 <state key="normal" title="Current">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="goToActionsList:" destination="FVg-0P-OVv" eventType="touchUpInside" id="ReF-Je-kRN"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -52,6 +55,9 @@
                                                 <state key="normal" title="New">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="goToCreateAction:" destination="FVg-0P-OVv" eventType="touchUpInside" id="Jjy-Y5-Mgd"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>

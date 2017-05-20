@@ -26,7 +26,6 @@ class MainCoordinator: Coordinator {
     fileprivate var childCoordinators: [Coordinator] = [
         LobbyCoordinator(),
         ARCoordinator()
-        //UserProfileCoordinator()
     ]
     
 //    @discardableResult
