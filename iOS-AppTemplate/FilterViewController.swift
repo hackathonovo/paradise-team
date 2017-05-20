@@ -12,6 +12,8 @@ class FilterViewController: BaseViewController {
     
     // MARK: - Dependencies
     
+    var onShouldPopBlurScreen: (()-> Void)?
+    
     var models = ["Filter1", "Filter2", "Filter3", "Filter4", "Filter5"]
     
     @IBOutlet weak var cancelButton: UIButton! {
@@ -22,6 +24,7 @@ class FilterViewController: BaseViewController {
     @IBOutlet weak var filterTableView: UITableView!
     
     @IBAction func cancelButtonTapped(_: UIButton) {
+        onShouldPopBlurScreen?()
         self.dismiss(animated: true, completion: nil)
     }
     

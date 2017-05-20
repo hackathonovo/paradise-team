@@ -13,7 +13,7 @@ class UsersListViewController: BaseViewController, UITableViewDelegate, UITableV
     @IBOutlet var usersListTableView: UITableView!
     
     var rootViewController: BaseNavigationController?
-    
+
     //MARK: - Outlets
     
     //MARK: - Model
@@ -23,9 +23,8 @@ class UsersListViewController: BaseViewController, UITableViewDelegate, UITableV
     //MARK: - Lifecycle
     
     override func viewDidLoad() {
-
-        let rightBarButtonItemFilter = UIBarButtonItem(title: "⚙️", style: .plain, target: self, action: #selector(showFilter))
         
+        let rightBarButtonItemFilter = UIBarButtonItem(title: "⚙️", style: .plain, target: self, action: #selector(showFilter))
         let rightBarButtonItemNext = UIBarButtonItem(title: "Dalje", style: .done, target: self, action: #selector(nextTapped))
         
         
@@ -53,12 +52,18 @@ class UsersListViewController: BaseViewController, UITableViewDelegate, UITableV
         
         let filterVC = FilterViewController.instance()
         
-        //        viewModel.onFilteredParams = { params in
-        //            self.feedViewModel?.requestType = .filter(params)
-        //            self.feedViewModel?.loadData()
-        //        }
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = filterVC.view.bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        let lastIndex = navigationController?.view.subviews.count
+        navigationController!.view.insertSubview(blurEffectView, at: lastIndex!)
+        
         
         filterVC.modalPresentationStyle = .overFullScreen
+        filterVC.onShouldPopBlurScreen = { _ in
+            blurEffectView.removeFromSuperview()
+        }
         navigationController!.present(filterVC, animated: true, completion: nil)
     }
 //
