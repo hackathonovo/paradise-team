@@ -29,13 +29,28 @@ class LobbyCoordinator: Coordinator {
         return navigationController
     }
     
-    init() {
-    }
-    
     func showActionsList() {
         let actionsList = ActionsTableViewController.instance()
         navigationController.pushViewController(actionsList, animated: true)
+        actionsList.onShouldShowActionDetails = { [weak self] index in
+            
+            self?.showActionDetails(index: index)
+        }
+    }
+    
+    func showActionDetails(index: Int) {
+        let actionDetailsVC = ActionDetailsViewController.instance()
+        actionDetailsVC.shouldInitChat = { [weak self] in
+            self?.initChat()
+        }
+        navigationController.pushViewController(actionDetailsVC, animated: true)
         
+    }
+    
+    func initChat() {
+        let chatVC = LoginViewController.instance()
+ 
+        navigationController.pushViewController(chatVC, animated: true)
     }
     
     func showCreateEditAction() {
@@ -46,7 +61,6 @@ class LobbyCoordinator: Coordinator {
             
         }
         navigationController.pushViewController(createEditAction, animated: true)
-        
     }
     
     func showCreateUsersListViewController() {
@@ -59,11 +73,12 @@ class LobbyCoordinator: Coordinator {
         navigationController.pushViewController(usersListViewController, animated: true)
     }
     
+    
     func showDescriptionViewController() {
         let descriptionViewController = DescriptionViewController.instance()
         descriptionViewController.shouldDismissNavigationController = { [weak self] in
             self?.navigationController.dismiss(animated: true, completion: {})
-            self?.start()
+            _ = self?.start()
         }
         navigationController.pushViewController(descriptionViewController, animated: true)
     }

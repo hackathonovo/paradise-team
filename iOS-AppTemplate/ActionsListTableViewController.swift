@@ -20,6 +20,7 @@ class ActionsTableViewController: BaseViewController, UITableViewDelegate, UITab
     
     //MARK: - Lifecycle
 
+    var onShouldShowActionDetails: ((Int)-> Void)?
     
     // MARK: - Table view data source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -62,6 +63,10 @@ class ActionsTableViewController: BaseViewController, UITableViewDelegate, UITab
     // Override to support rearranging the table view.
     func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
         
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        onShouldShowActionDetails?(indexPath.row)
     }
 }
 

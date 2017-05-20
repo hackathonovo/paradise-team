@@ -42,6 +42,17 @@
 		4B4E53451ECDB82B00539AE9 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4E53441ECDB82B00539AE9 /* Token.swift */; };
 		4B64DE091ECDF29F0042941F /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B64DE081ECDF29F0042941F /* UserDefaultsManager.swift */; };
 		4B64DE0D1ECF99130042941F /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B64DE0C1ECF99130042941F /* MainCoordinator.swift */; };
+		4B92B5F11ED0E4E8001362E5 /* ActionDetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B92B5F01ED0E4E8001362E5 /* ActionDetailsViewController.storyboard */; };
+		4B92B5F31ED0E4F8001362E5 /* ActionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B92B5F21ED0E4F8001362E5 /* ActionDetailsViewController.swift */; };
+		4BBC5BE31ED0FA9500CD834C /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BBC5BE21ED0FA9500CD834C /* LoginViewController.storyboard */; };
+		4BF370311ED0F5E40051ED46 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF370271ED0F5E40051ED46 /* Channel.swift */; };
+		4BF370321ED0F5E40051ED46 /* ChannelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF370281ED0F5E40051ED46 /* ChannelListViewController.swift */; };
+		4BF370331ED0F5E40051ED46 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3702B1ED0F5E40051ED46 /* ChatViewController.swift */; };
+		4BF370341ED0F5E40051ED46 /* CreateChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3702C1ED0F5E40051ED46 /* CreateChannelCell.swift */; };
+		4BF370351ED0F5E40051ED46 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BF3702D1ED0F5E40051ED46 /* GoogleService-Info.plist */; };
+		4BF370361ED0F5E40051ED46 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3702E1ED0F5E40051ED46 /* LoginViewController.swift */; };
+		4BF370371ED0F5E40051ED46 /* m.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3702F1ED0F5E40051ED46 /* m.m */; };
+		4BF370381ED0F5E40051ED46 /* UIImage+Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF370301ED0F5E40051ED46 /* UIImage+Gif.swift */; };
 		B06B76A35D67BE544934C546 /* Pods_iOS_AppTemplateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C251434CDE936964A787E2 /* Pods_iOS_AppTemplateTests.framework */; };
 		DF27C0FE2F4B0BCD7A82A475 /* Pods_iOS_AppTemplateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABCFCB04F2F685FD813E555E /* Pods_iOS_AppTemplateUITests.framework */; };
 /* End PBXBuildFile section */
@@ -105,6 +116,20 @@
 		4B4E53441ECDB82B00539AE9 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		4B64DE081ECDF29F0042941F /* UserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		4B64DE0C1ECF99130042941F /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		4B92B5F01ED0E4E8001362E5 /* ActionDetailsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ActionDetailsViewController.storyboard; sourceTree = "<group>"; };
+		4B92B5F21ED0E4F8001362E5 /* ActionDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionDetailsViewController.swift; sourceTree = "<group>"; };
+		4BBC5BE21ED0FA9500CD834C /* LoginViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
+		4BF370261ED0F5E30051ED46 /* iOS-AppTemplate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS-AppTemplate-Bridging-Header.h"; sourceTree = "<group>"; };
+		4BF370271ED0F5E40051ED46 /* Channel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		4BF370281ED0F5E40051ED46 /* ChannelListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelListViewController.swift; sourceTree = "<group>"; };
+		4BF370291ED0F5E40051ED46 /* ChatChat-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ChatChat-Bridging-Header.h"; sourceTree = "<group>"; };
+		4BF3702A1ED0F5E40051ED46 /* ChatChat.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = ChatChat.entitlements; sourceTree = "<group>"; };
+		4BF3702B1ED0F5E40051ED46 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		4BF3702C1ED0F5E40051ED46 /* CreateChannelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateChannelCell.swift; sourceTree = "<group>"; };
+		4BF3702D1ED0F5E40051ED46 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4BF3702E1ED0F5E40051ED46 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4BF3702F1ED0F5E40051ED46 /* m.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = m.m; sourceTree = "<group>"; };
+		4BF370301ED0F5E40051ED46 /* UIImage+Gif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Gif.swift"; sourceTree = "<group>"; };
 		86FD264CA470BA17F7936E13 /* Pods-iOS-AppTemplateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-AppTemplateTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-AppTemplateTests/Pods-iOS-AppTemplateTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A8C9F026DB0F1CF07D8FBEEB /* Pods-iOS-AppTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-AppTemplate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-AppTemplate/Pods-iOS-AppTemplate.debug.xcconfig"; sourceTree = "<group>"; };
 		ABCFCB04F2F685FD813E555E /* Pods_iOS_AppTemplateUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_AppTemplateUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -192,6 +217,7 @@
 				4B3C70EC1ED06397000EBE8B /* ActionsTableViewController.storyboard */,
 				4B3C70E81ED06121000EBE8B /* ActionsListTableViewController.swift */,
 				4B3C70EA1ED06343000EBE8B /* ActionsTableViewCell.swift */,
+				4B92B5EF1ED0E4D0001362E5 /* Action Details */,
 			);
 			name = "Actions List";
 			sourceTree = "<group>";
@@ -199,6 +225,7 @@
 		4B3C70EE1ED06EA7000EBE8B /* Create / Edit action */ = {
 			isa = PBXGroup;
 			children = (
+				4BF370251ED0F5B70051ED46 /* SOCKET CHAT */,
 				4B3C70F71ED0A6A6000EBE8B /* CreateEditActionViewController */,
 				4B3C70F81ED0A6BA000EBE8B /* UsersListViewController */,
 				4B3C71021ED0D0B6000EBE8B /* DescriptionViewController */,
@@ -340,6 +367,34 @@
 			name = Networking;
 			sourceTree = "<group>";
 		};
+		4B92B5EF1ED0E4D0001362E5 /* Action Details */ = {
+			isa = PBXGroup;
+			children = (
+				4B92B5F01ED0E4E8001362E5 /* ActionDetailsViewController.storyboard */,
+				4B92B5F21ED0E4F8001362E5 /* ActionDetailsViewController.swift */,
+			);
+			name = "Action Details";
+			sourceTree = "<group>";
+		};
+		4BF370251ED0F5B70051ED46 /* SOCKET CHAT */ = {
+			isa = PBXGroup;
+			children = (
+				4BBC5BE21ED0FA9500CD834C /* LoginViewController.storyboard */,
+				4BF370271ED0F5E40051ED46 /* Channel.swift */,
+				4BF370281ED0F5E40051ED46 /* ChannelListViewController.swift */,
+				4BF370291ED0F5E40051ED46 /* ChatChat-Bridging-Header.h */,
+				4BF3702A1ED0F5E40051ED46 /* ChatChat.entitlements */,
+				4BF3702B1ED0F5E40051ED46 /* ChatViewController.swift */,
+				4BF3702C1ED0F5E40051ED46 /* CreateChannelCell.swift */,
+				4BF3702D1ED0F5E40051ED46 /* GoogleService-Info.plist */,
+				4BF3702E1ED0F5E40051ED46 /* LoginViewController.swift */,
+				4BF3702F1ED0F5E40051ED46 /* m.m */,
+				4BF370301ED0F5E40051ED46 /* UIImage+Gif.swift */,
+				4BF370261ED0F5E30051ED46 /* iOS-AppTemplate-Bridging-Header.h */,
+			);
+			name = "SOCKET CHAT";
+			sourceTree = "<group>";
+		};
 		AAB65ACE34F704B75ABE28BA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -428,6 +483,7 @@
 					4B4E53061ECC6E3400539AE9 = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = VWRH7N68VU;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					4B4E531A1ECC6E3400539AE9 = {
@@ -469,13 +525,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B92B5F11ED0E4E8001362E5 /* ActionDetailsViewController.storyboard in Resources */,
 				4B3C70F41ED0A36E000EBE8B /* UsersListViewController.storyboard in Resources */,
 				4B3C71061ED0D114000EBE8B /* DescriptionViewController.storyboard in Resources */,
+				4BBC5BE31ED0FA9500CD834C /* LoginViewController.storyboard in Resources */,
 				4B3C70E11ED0517D000EBE8B /* LobbyViewController.storyboard in Resources */,
 				4B4E53151ECC6E3400539AE9 /* LaunchScreen.storyboard in Resources */,
 				4B3C70FF1ED0AEE1000EBE8B /* FilterViewController.storyboard in Resources */,
 				4B3C70ED1ED06397000EBE8B /* ActionsTableViewController.storyboard in Resources */,
 				4B4E53121ECC6E3400539AE9 /* Assets.xcassets in Resources */,
+				4BF370351ED0F5E40051ED46 /* GoogleService-Info.plist in Resources */,
 				4B3C70F01ED06EE4000EBE8B /* CreateEditActionViewController.storyboard in Resources */,
 				4B4E53101ECC6E3400539AE9 /* Main.storyboard in Resources */,
 			);
@@ -640,12 +699,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BF370321ED0F5E40051ED46 /* ChannelListViewController.swift in Sources */,
 				4B3C70FD1ED0AE73000EBE8B /* FilterViewController.swift in Sources */,
 				4B3C70FA1ED0A6F5000EBE8B /* UsersListTableViewCell.swift in Sources */,
 				4B3C70F21ED06FCC000EBE8B /* CreateEditActionViewController.swift in Sources */,
 				4B4E530D1ECC6E3400539AE9 /* ViewController.swift in Sources */,
+				4BF370361ED0F5E40051ED46 /* LoginViewController.swift in Sources */,
 				4B3C70EB1ED06343000EBE8B /* ActionsTableViewCell.swift in Sources */,
+				4B92B5F31ED0E4F8001362E5 /* ActionDetailsViewController.swift in Sources */,
 				4B4E53451ECDB82B00539AE9 /* Token.swift in Sources */,
+				4BF370371ED0F5E40051ED46 /* m.m in Sources */,
 				4B3C70D91ED04B2C000EBE8B /* LobbyCoordinator.swift in Sources */,
 				4B3C70F61ED0A382000EBE8B /* UsersListViewController.swift in Sources */,
 				4B4E53411ECCDEBB00539AE9 /* NetworkingServiceProtocol.swift in Sources */,
@@ -655,14 +718,18 @@
 				4B3C70E31ED0575B000EBE8B /* ARCoordinator.swift in Sources */,
 				4B4E533F1ECCBAC700539AE9 /* ApiPaths.swift in Sources */,
 				4B3C70E91ED06121000EBE8B /* ActionsListTableViewController.swift in Sources */,
+				4BF370311ED0F5E40051ED46 /* Channel.swift in Sources */,
 				4B3C70DD1ED04D11000EBE8B /* BaseViewController.swift in Sources */,
 				4B3C70DB1ED04BED000EBE8B /* BaseNavigationController.swift in Sources */,
 				4B3C71011ED0AF84000EBE8B /* FIlterTableViewCell.swift in Sources */,
 				4B4E53391ECC6E6E00539AE9 /* LoginService.swift in Sources */,
 				4B3C70DF1ED05031000EBE8B /* LobbyViewController.swift in Sources */,
+				4BF370381ED0F5E40051ED46 /* UIImage+Gif.swift in Sources */,
 				4B64DE0D1ECF99130042941F /* MainCoordinator.swift in Sources */,
 				4B3C71041ED0D0D9000EBE8B /* DescriptionViewController.swift in Sources */,
+				4BF370331ED0F5E40051ED46 /* ChatViewController.swift in Sources */,
 				4B4E530B1ECC6E3400539AE9 /* AppDelegate.swift in Sources */,
+				4BF370341ED0F5E40051ED46 /* CreateChannelCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -817,11 +884,14 @@
 			baseConfigurationReference = A8C9F026DB0F1CF07D8FBEEB /* Pods-iOS-AppTemplate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = VWRH7N68VU;
 				INFOPLIST_FILE = "iOS-AppTemplate/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ReOs.iOS-AppTemplate";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOS-AppTemplate/iOS-AppTemplate-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -831,11 +901,13 @@
 			baseConfigurationReference = D6AE6101695B9E9B5F8613D9 /* Pods-iOS-AppTemplate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = VWRH7N68VU;
 				INFOPLIST_FILE = "iOS-AppTemplate/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ReOs.iOS-AppTemplate";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOS-AppTemplate/iOS-AppTemplate-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
