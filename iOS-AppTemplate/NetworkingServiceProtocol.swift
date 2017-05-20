@@ -21,7 +21,8 @@ extension NetworkingServiceProtocol {
         let path = AppConfig.baseUrl + route
         let headers = prepareHeaders(headers: customHeaders)
         
-        let req = request(path, method: method, parameters: nil, encoding: encoding, headers: headers)
+        print(headers)
+        let req = request(path, method: method, parameters: parameters, encoding: encoding, headers: headers)
             .responseString { response in
                 print(response)
             }

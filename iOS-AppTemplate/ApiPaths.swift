@@ -11,5 +11,7 @@ import Foundation
 enum ApiPaths {
     
     static let login: String = "/token"
+    static let user: String = "/api/user"
+    
     
 }

@@ -20,7 +20,7 @@ class UserDefaultsManager {
         defaults.set(value, forKey: key)
     }
     
-    func getValue(key: String) -> String {
+    func getValue(forKey key: String) -> String {
         return defaults.string(forKey: key)!
     }
 }

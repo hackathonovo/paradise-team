@@ -23,7 +23,7 @@ class LoginService: NetworkingServiceProtocol {
             params[key] = value
         }
 
-        makeRequest(with: ApiPaths.login, method: .get, parameters: params, completion: { response in
+        makeRequest(with: ApiPaths.login, method: .post, parameters: params, completion: { response in
             
             switch response.result {
                 
@@ -32,7 +32,9 @@ class LoginService: NetworkingServiceProtocol {
                 let token = Token(json: json)
                 let manager = UserDefaultsManager()
                 
+                manager.setValue(token.tokenType, forKey: "token_type")
                 manager.setValue(token.accessToken, forKey: "access_token")
+                
                 onComplete()
 
             case .failure(let error):
@@ -40,4 +42,33 @@ class LoginService: NetworkingServiceProtocol {
             }
         })
     }
+    
+    public func getUserData(onComplete: ()-> Void) {
+        
+        let manager = UserDefaultsManager()
+    
+        let accessToken = manager.getValue(forKey: "access_token")
+        let tokenType = manager.getValue(forKey: "token_type")
+        
+        let header = ["Authorization": tokenType + " " + accessToken]
+        
+        makeRequest(with: ApiPaths.user, method: .get, parameters: [:], headers: header, completion: { response in
+            
+            switch response.result {
+                
+            case .success(let json):
+                
+                print(json)
+                
+            case .failure(let error):
+                print(error)
+                
+            }
+        })
+        
+        
+        
+    }
 }
+
+

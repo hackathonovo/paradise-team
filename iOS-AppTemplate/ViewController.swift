@@ -8,21 +8,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: BaseViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
         _ = LoginService().login(username: "test@mail.com", password: "test123", onComplete: {
-            
+        _ = LoginService().getUserData(onComplete: {})
         })
+        
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
