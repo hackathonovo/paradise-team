@@ -52,13 +52,23 @@ class LobbyCoordinator: Coordinator {
     func showCreateUsersListViewController() {
         let usersListViewController = UsersListViewController.instance()
         usersListViewController.rootViewController = navigationController
-        //addFilterButton(usersListViewController)
+        usersListViewController.onShouldNavigateToDescriptionViewController = { [weak self] in
+            self?.showDescriptionViewController()
+        }
         
         navigationController.pushViewController(usersListViewController, animated: true)
-        
     }
     
-
-
-
+    func showDescriptionViewController() {
+        let descriptionViewController = DescriptionViewController.instance()
+        descriptionViewController.shouldDismissNavigationController = { [weak self] in
+            self?.navigationController.dismiss(animated: true, completion: {})
+            self?.start()
+        }
+        navigationController.pushViewController(descriptionViewController, animated: true)
+    }
+    
+    
+    
+    
 }

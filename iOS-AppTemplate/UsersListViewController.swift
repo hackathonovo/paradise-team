@@ -13,6 +13,7 @@ class UsersListViewController: BaseViewController, UITableViewDelegate, UITableV
     @IBOutlet var usersListTableView: UITableView!
     
     var rootViewController: BaseNavigationController?
+    var onShouldNavigateToDescriptionViewController: (()-> Void)?
 
     //MARK: - Outlets
     
@@ -67,7 +68,9 @@ class UsersListViewController: BaseViewController, UITableViewDelegate, UITableV
         navigationController!.present(filterVC, animated: true, completion: nil)
     }
 //
-    func nextTapped() {}
+    func nextTapped() {
+        onShouldNavigateToDescriptionViewController?()
+    }
     
     
     

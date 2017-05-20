@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,16 +26,48 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6H0-bd-qsj">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6H0-bd-qsj">
                                             <rect key="frame" x="8" y="12" width="217" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="217" id="uhW-PM-SNp"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmE-5c-Tyh" customClass="UIButton">
+                                            <rect key="frame" x="325" y="7.5" width="30" height="30"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YN4-7i-lFG">
+                                                    <rect key="frame" x="4" y="4" width="22" height="22"/>
+                                                    <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="YN4-7i-lFG" secondAttribute="trailing" constant="4" id="8PD-RF-17h"/>
+                                                <constraint firstAttribute="height" constant="30" id="CKT-3a-6TM"/>
+                                                <constraint firstAttribute="bottom" secondItem="YN4-7i-lFG" secondAttribute="bottom" constant="4" id="HvC-4F-2i0"/>
+                                                <constraint firstItem="YN4-7i-lFG" firstAttribute="leading" secondItem="lmE-5c-Tyh" secondAttribute="leading" constant="4" id="UI9-7s-7Vf"/>
+                                                <constraint firstItem="YN4-7i-lFG" firstAttribute="top" secondItem="lmE-5c-Tyh" secondAttribute="top" constant="4" id="ehF-CM-hnz"/>
+                                                <constraint firstAttribute="width" constant="30" id="zw3-qx-Bbc"/>
+                                            </constraints>
+                                            <connections>
+                                                <action selector="triggeredButton:" destination="mRr-DK-zNm" eventType="valueChanged" id="B6b-EZ-6hc"/>
+                                            </connections>
+                                        </view>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="6H0-bd-qsj" firstAttribute="leading" secondItem="ho5-Xo-frm" secondAttribute="leadingMargin" id="7Z6-Jx-ArP"/>
+                                        <constraint firstItem="lmE-5c-Tyh" firstAttribute="leading" secondItem="6H0-bd-qsj" secondAttribute="trailing" constant="100" id="9Cj-IF-PQH"/>
+                                        <constraint firstItem="6H0-bd-qsj" firstAttribute="centerY" secondItem="lmE-5c-Tyh" secondAttribute="centerY" id="Mpk-9D-A3L"/>
+                                        <constraint firstItem="6H0-bd-qsj" firstAttribute="centerY" secondItem="ho5-Xo-frm" secondAttribute="centerY" id="ozO-T6-0bJ"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="biggerCubeRadioButton" destination="lmE-5c-Tyh" id="0hY-EQ-713"/>
+                                    <outlet property="smallerCubeRadioButton" destination="YN4-7i-lFG" id="OQV-zv-4VU"/>
                                     <outlet property="titleLabel" destination="6H0-bd-qsj" id="auT-jc-pBh"/>
                                 </connections>
                             </tableViewCell>

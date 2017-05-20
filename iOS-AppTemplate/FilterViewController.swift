@@ -37,7 +37,7 @@ class FilterViewController: BaseViewController {
     @IBAction func saveButtonTapped(_: UIButton) {
         
         //viewModel.getFilteredData(data: models)
-        
+        onShouldPopBlurScreen?()
         self.dismiss(animated: true, completion: nil)
         
     }

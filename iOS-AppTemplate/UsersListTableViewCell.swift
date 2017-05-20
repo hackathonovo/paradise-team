@@ -12,9 +12,22 @@ class UsersListTableViewCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     
+    @IBOutlet weak var biggerCubeRadioButton: UIButton!
+    @IBOutlet weak var smallerCubeRadioButton: UIView!
+    
+    @IBAction func triggeredButton(_ sender: UIButton) {
+        
+        smallerCubeRadioButton.backgroundColor = UIColor.white
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        
+        biggerCubeRadioButton.layer.borderColor = UIColor.gray.cgColor
+        biggerCubeRadioButton.layer.borderWidth = 1
+        
+        biggerCubeRadioButton.layer.cornerRadius = biggerCubeRadioButton.frame.height / 2
+        smallerCubeRadioButton.layer.cornerRadius = smallerCubeRadioButton.frame.height / 2
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

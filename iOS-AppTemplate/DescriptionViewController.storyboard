@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NLm-1Q-jmu">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Description View Controller-->
+        <scene sceneID="oZk-Wj-Pmx">
+            <objects>
+                <viewController id="NLm-1Q-jmu" customClass="DescriptionViewController" customModule="iOS_AppTemplate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fSp-LB-udB"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y6O-Gf-c61"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rau-fS-eqt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RRL-ae-SoZ">
+                                <rect key="frame" x="5" y="25" width="365" height="592"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZJm-QJ-SQb">
+                                        <rect key="frame" x="0.0" y="0.0" width="365" height="75"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="jqi-Wt-ydX"/>
+                                        </constraints>
+                                    </view>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" text="Opis: " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6MF-iM-ECg">
+                                        <rect key="frame" x="0.0" y="75" width="365" height="367"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f65-qz-sbr">
+                                        <rect key="frame" x="0.0" y="442" width="365" height="100"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="z5O-tf-hII"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9J-GW-rvG">
+                                        <rect key="frame" x="0.0" y="542" width="365" height="50"/>
+                                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="8Sf-KN-UKn"/>
+                                        </constraints>
+                                        <state key="normal" title="Pošalji">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendAction:" destination="NLm-1Q-jmu" eventType="touchUpInside" id="RTh-eU-I8j"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RRL-ae-SoZ" firstAttribute="leading" secondItem="rau-fS-eqt" secondAttribute="leading" constant="5" id="A3T-zF-jWw"/>
+                            <constraint firstAttribute="trailing" secondItem="RRL-ae-SoZ" secondAttribute="trailing" constant="5" id="P6g-g4-uv2"/>
+                            <constraint firstItem="Y6O-Gf-c61" firstAttribute="top" secondItem="RRL-ae-SoZ" secondAttribute="bottom" constant="50" id="TeK-k7-Os9"/>
+                            <constraint firstItem="RRL-ae-SoZ" firstAttribute="top" secondItem="rau-fS-eqt" secondAttribute="top" constant="25" id="oiG-XO-iBV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="6MF-iM-ECg" id="6lS-dK-ftQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Ql-BG-2cH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="92" y="243.32833583208398"/>
+        </scene>
+    </scenes>
+</document>
