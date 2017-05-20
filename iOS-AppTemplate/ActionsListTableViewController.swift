@@ -63,12 +63,6 @@ class ActionsTableViewController: BaseViewController, UITableViewDelegate, UITab
     func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
         
     }
-    
-    
-    
-    
-    
-    
 }
 
 
