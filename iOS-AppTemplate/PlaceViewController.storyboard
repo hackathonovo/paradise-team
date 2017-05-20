@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jAW-Vo-LEd">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Place View Controller-->
+        <scene sceneID="hgw-V7-5cN">
+            <objects>
+                <viewController id="jAW-Vo-LEd" customClass="PlaceViewController" customModule="iOS_AppTemplate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EV1-ak-Mxl"/>
+                        <viewControllerLayoutGuide type="bottom" id="EiB-3i-2Tz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8sM-UN-pvT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RcO-99-msa">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <connections>
+                                    <outlet property="delegate" destination="jAW-Vo-LEd" id="Q81-Ui-emX"/>
+                                </connections>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2f-sc-JSx">
+                                <rect key="frame" x="301" y="629" width="54" height="30"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="showARController:" destination="jAW-Vo-LEd" eventType="touchUpInside" id="Dhw-UB-avz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RcO-99-msa" firstAttribute="leading" secondItem="8sM-UN-pvT" secondAttribute="leading" id="3cc-nS-OCY"/>
+                            <constraint firstAttribute="trailing" secondItem="RcO-99-msa" secondAttribute="trailing" id="K8O-71-zWG"/>
+                            <constraint firstItem="EiB-3i-2Tz" firstAttribute="top" secondItem="S2f-sc-JSx" secondAttribute="bottom" constant="8" symbolic="YES" id="kcY-ck-LC3"/>
+                            <constraint firstItem="EiB-3i-2Tz" firstAttribute="top" secondItem="RcO-99-msa" secondAttribute="bottom" id="ko1-lb-yvo"/>
+                            <constraint firstAttribute="trailing" secondItem="S2f-sc-JSx" secondAttribute="trailing" constant="20" symbolic="YES" id="rWr-qx-cYb"/>
+                            <constraint firstItem="RcO-99-msa" firstAttribute="top" secondItem="EV1-ak-Mxl" secondAttribute="bottom" id="yuF-Z2-jLR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="RcO-99-msa" id="V4b-DT-nMO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ome-n4-oQ2" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

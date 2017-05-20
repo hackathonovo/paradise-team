@@ -12,7 +12,7 @@ class ARCoordinator: Coordinator {
     private var navigationController = BaseNavigationController()
     
     func start() -> UIViewController {
-        let lobby = LobbyViewController.instance()
+        let lobby = PlaceViewController.instance()
         //let viewModel = FeedViewModel(ServiceFactory.feedService)
         //feed.viewModel = viewModel
         //        viewModel.onShouldShowDetails = { [weak self] feedItem in

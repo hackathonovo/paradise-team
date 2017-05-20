@@ -45,6 +45,23 @@
 		4B92B5F11ED0E4E8001362E5 /* ActionDetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B92B5F01ED0E4E8001362E5 /* ActionDetailsViewController.storyboard */; };
 		4B92B5F31ED0E4F8001362E5 /* ActionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B92B5F21ED0E4F8001362E5 /* ActionDetailsViewController.swift */; };
 		4BBC5BE31ED0FA9500CD834C /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BBC5BE21ED0FA9500CD834C /* LoginViewController.storyboard */; };
+		4BBC5BE81ED10A5F00CD834C /* PlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBC5BE71ED10A5F00CD834C /* PlaceViewController.swift */; };
+		4BBC5BEA1ED10ABA00CD834C /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBC5BE91ED10ABA00CD834C /* Place.swift */; };
+		4BBC5BEC1ED10ADF00CD834C /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBC5BEB1ED10ADF00CD834C /* AnnotationView.swift */; };
+		4BBC5BEE1ED10B0F00CD834C /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBC5BED1ED10B0F00CD834C /* PlaceAnnotation.swift */; };
+		4BBC5BF01ED10B3000CD834C /* PlacesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBC5BEF1ED10B3000CD834C /* PlacesLoader.swift */; };
+		4BBC5BF21ED10B5800CD834C /* PlaceViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BBC5BF11ED10B5800CD834C /* PlaceViewController.storyboard */; };
+		4BBC5BF41ED10BA200CD834C /* HDAugmentedReality in Resources */ = {isa = PBXBuildFile; fileRef = 4BBC5BF31ED10BA200CD834C /* HDAugmentedReality */; };
+		4BBC5BF61ED10C1C00CD834C /* ARAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBC5BF51ED10C1C00CD834C /* ARAnnotation.swift */; };
+		4BBC5BF81ED10C2500CD834C /* ARAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBC5BF71ED10C2500CD834C /* ARAnnotationView.swift */; };
+		4BBC5BFA1ED10C2A00CD834C /* ARConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBC5BF91ED10C2A00CD834C /* ARConfiguration.swift */; };
+		4BBC5BFC1ED10C2F00CD834C /* ARTrackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBC5BFB1ED10C2F00CD834C /* ARTrackingManager.swift */; };
+		4BBC5BFE1ED10C3600CD834C /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBC5BFD1ED10C3600CD834C /* ARViewController.swift */; };
+		4BBC5C001ED10C4B00CD834C /* DebugMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBC5BFF1ED10C4B00CD834C /* DebugMapViewController.swift */; };
+		4BBC5C021ED10C5B00CD834C /* DebugMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BBC5C011ED10C5B00CD834C /* DebugMapViewController.xib */; };
+		4BBC5C041ED10C6200CD834C /* hdar_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BBC5C031ED10C6200CD834C /* hdar_close.png */; };
+		4BBC5C061ED10C6800CD834C /* hdar_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BBC5C051ED10C6800CD834C /* hdar_close@2x.png */; };
+		4BBC5C081ED10C7000CD834C /* hdar_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BBC5C071ED10C7000CD834C /* hdar_close@3x.png */; };
 		4BF370311ED0F5E40051ED46 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF370271ED0F5E40051ED46 /* Channel.swift */; };
 		4BF370321ED0F5E40051ED46 /* ChannelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF370281ED0F5E40051ED46 /* ChannelListViewController.swift */; };
 		4BF370331ED0F5E40051ED46 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3702B1ED0F5E40051ED46 /* ChatViewController.swift */; };
@@ -119,6 +136,23 @@
 		4B92B5F01ED0E4E8001362E5 /* ActionDetailsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ActionDetailsViewController.storyboard; sourceTree = "<group>"; };
 		4B92B5F21ED0E4F8001362E5 /* ActionDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionDetailsViewController.swift; sourceTree = "<group>"; };
 		4BBC5BE21ED0FA9500CD834C /* LoginViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
+		4BBC5BE71ED10A5F00CD834C /* PlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceViewController.swift; sourceTree = "<group>"; };
+		4BBC5BE91ED10ABA00CD834C /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		4BBC5BEB1ED10ADF00CD834C /* AnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
+		4BBC5BED1ED10B0F00CD834C /* PlaceAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
+		4BBC5BEF1ED10B3000CD834C /* PlacesLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesLoader.swift; sourceTree = "<group>"; };
+		4BBC5BF11ED10B5800CD834C /* PlaceViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PlaceViewController.storyboard; sourceTree = "<group>"; };
+		4BBC5BF31ED10BA200CD834C /* HDAugmentedReality */ = {isa = PBXFileReference; lastKnownFileType = folder; path = HDAugmentedReality; sourceTree = "<group>"; };
+		4BBC5BF51ED10C1C00CD834C /* ARAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ARAnnotation.swift; path = HDAugmentedReality/Classes/ARAnnotation.swift; sourceTree = "<group>"; };
+		4BBC5BF71ED10C2500CD834C /* ARAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ARAnnotationView.swift; path = HDAugmentedReality/Classes/ARAnnotationView.swift; sourceTree = "<group>"; };
+		4BBC5BF91ED10C2A00CD834C /* ARConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ARConfiguration.swift; path = HDAugmentedReality/Classes/ARConfiguration.swift; sourceTree = "<group>"; };
+		4BBC5BFB1ED10C2F00CD834C /* ARTrackingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ARTrackingManager.swift; path = HDAugmentedReality/Classes/ARTrackingManager.swift; sourceTree = "<group>"; };
+		4BBC5BFD1ED10C3600CD834C /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ARViewController.swift; path = HDAugmentedReality/Classes/ARViewController.swift; sourceTree = "<group>"; };
+		4BBC5BFF1ED10C4B00CD834C /* DebugMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DebugMapViewController.swift; path = HDAugmentedReality/Classes/Debug/DebugMapViewController.swift; sourceTree = "<group>"; };
+		4BBC5C011ED10C5B00CD834C /* DebugMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DebugMapViewController.xib; path = HDAugmentedReality/Classes/DebugMapViewController.xib; sourceTree = "<group>"; };
+		4BBC5C031ED10C6200CD834C /* hdar_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hdar_close.png; path = HDAugmentedReality/Resources/hdar_close.png; sourceTree = "<group>"; };
+		4BBC5C051ED10C6800CD834C /* hdar_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hdar_close@2x.png"; path = "HDAugmentedReality/Resources/hdar_close@2x.png"; sourceTree = "<group>"; };
+		4BBC5C071ED10C7000CD834C /* hdar_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hdar_close@3x.png"; path = "HDAugmentedReality/Resources/hdar_close@3x.png"; sourceTree = "<group>"; };
 		4BF370261ED0F5E30051ED46 /* iOS-AppTemplate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS-AppTemplate-Bridging-Header.h"; sourceTree = "<group>"; };
 		4BF370271ED0F5E40051ED46 /* Channel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		4BF370281ED0F5E40051ED46 /* ChannelListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelListViewController.swift; sourceTree = "<group>"; };
@@ -207,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				4B3C70E21ED0575B000EBE8B /* ARCoordinator.swift */,
+				4BBC5BE41ED1066200CD834C /* Places */,
 			);
 			name = AR;
 			sourceTree = "<group>";
@@ -376,6 +411,30 @@
 			name = "Action Details";
 			sourceTree = "<group>";
 		};
+		4BBC5BE41ED1066200CD834C /* Places */ = {
+			isa = PBXGroup;
+			children = (
+				4BBC5BE71ED10A5F00CD834C /* PlaceViewController.swift */,
+				4BBC5BE91ED10ABA00CD834C /* Place.swift */,
+				4BBC5BEB1ED10ADF00CD834C /* AnnotationView.swift */,
+				4BBC5BED1ED10B0F00CD834C /* PlaceAnnotation.swift */,
+				4BBC5BEF1ED10B3000CD834C /* PlacesLoader.swift */,
+				4BBC5BF11ED10B5800CD834C /* PlaceViewController.storyboard */,
+				4BBC5BF51ED10C1C00CD834C /* ARAnnotation.swift */,
+				4BBC5BF71ED10C2500CD834C /* ARAnnotationView.swift */,
+				4BBC5BF91ED10C2A00CD834C /* ARConfiguration.swift */,
+				4BBC5BFB1ED10C2F00CD834C /* ARTrackingManager.swift */,
+				4BBC5BFD1ED10C3600CD834C /* ARViewController.swift */,
+				4BBC5BFF1ED10C4B00CD834C /* DebugMapViewController.swift */,
+				4BBC5C011ED10C5B00CD834C /* DebugMapViewController.xib */,
+				4BBC5C031ED10C6200CD834C /* hdar_close.png */,
+				4BBC5C051ED10C6800CD834C /* hdar_close@2x.png */,
+				4BBC5C071ED10C7000CD834C /* hdar_close@3x.png */,
+				4BBC5BF31ED10BA200CD834C /* HDAugmentedReality */,
+			);
+			name = Places;
+			sourceTree = "<group>";
+		};
 		4BF370251ED0F5B70051ED46 /* SOCKET CHAT */ = {
 			isa = PBXGroup;
 			children = (
@@ -525,15 +584,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BBC5BF41ED10BA200CD834C /* HDAugmentedReality in Resources */,
 				4B92B5F11ED0E4E8001362E5 /* ActionDetailsViewController.storyboard in Resources */,
 				4B3C70F41ED0A36E000EBE8B /* UsersListViewController.storyboard in Resources */,
 				4B3C71061ED0D114000EBE8B /* DescriptionViewController.storyboard in Resources */,
+				4BBC5C061ED10C6800CD834C /* hdar_close@2x.png in Resources */,
 				4BBC5BE31ED0FA9500CD834C /* LoginViewController.storyboard in Resources */,
+				4BBC5C041ED10C6200CD834C /* hdar_close.png in Resources */,
+				4BBC5C081ED10C7000CD834C /* hdar_close@3x.png in Resources */,
+				4BBC5C021ED10C5B00CD834C /* DebugMapViewController.xib in Resources */,
 				4B3C70E11ED0517D000EBE8B /* LobbyViewController.storyboard in Resources */,
 				4B4E53151ECC6E3400539AE9 /* LaunchScreen.storyboard in Resources */,
 				4B3C70FF1ED0AEE1000EBE8B /* FilterViewController.storyboard in Resources */,
 				4B3C70ED1ED06397000EBE8B /* ActionsTableViewController.storyboard in Resources */,
 				4B4E53121ECC6E3400539AE9 /* Assets.xcassets in Resources */,
+				4BBC5BF21ED10B5800CD834C /* PlaceViewController.storyboard in Resources */,
 				4BF370351ED0F5E40051ED46 /* GoogleService-Info.plist in Resources */,
 				4B3C70F01ED06EE4000EBE8B /* CreateEditActionViewController.storyboard in Resources */,
 				4B4E53101ECC6E3400539AE9 /* Main.storyboard in Resources */,
@@ -699,20 +764,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BBC5BF01ED10B3000CD834C /* PlacesLoader.swift in Sources */,
+				4BBC5C001ED10C4B00CD834C /* DebugMapViewController.swift in Sources */,
 				4BF370321ED0F5E40051ED46 /* ChannelListViewController.swift in Sources */,
 				4B3C70FD1ED0AE73000EBE8B /* FilterViewController.swift in Sources */,
 				4B3C70FA1ED0A6F5000EBE8B /* UsersListTableViewCell.swift in Sources */,
 				4B3C70F21ED06FCC000EBE8B /* CreateEditActionViewController.swift in Sources */,
 				4B4E530D1ECC6E3400539AE9 /* ViewController.swift in Sources */,
+				4BBC5BFE1ED10C3600CD834C /* ARViewController.swift in Sources */,
 				4BF370361ED0F5E40051ED46 /* LoginViewController.swift in Sources */,
 				4B3C70EB1ED06343000EBE8B /* ActionsTableViewCell.swift in Sources */,
 				4B92B5F31ED0E4F8001362E5 /* ActionDetailsViewController.swift in Sources */,
 				4B4E53451ECDB82B00539AE9 /* Token.swift in Sources */,
+				4BBC5BEA1ED10ABA00CD834C /* Place.swift in Sources */,
+				4BBC5BFC1ED10C2F00CD834C /* ARTrackingManager.swift in Sources */,
 				4BF370371ED0F5E40051ED46 /* m.m in Sources */,
 				4B3C70D91ED04B2C000EBE8B /* LobbyCoordinator.swift in Sources */,
 				4B3C70F61ED0A382000EBE8B /* UsersListViewController.swift in Sources */,
 				4B4E53411ECCDEBB00539AE9 /* NetworkingServiceProtocol.swift in Sources */,
 				4B4E533D1ECCAFB900539AE9 /* AppConfig.swift in Sources */,
+				4BBC5BFA1ED10C2A00CD834C /* ARConfiguration.swift in Sources */,
 				4B3C70D71ED04A39000EBE8B /* UIViewController + PresentAsRoot.swift in Sources */,
 				4B64DE091ECDF29F0042941F /* UserDefaultsManager.swift in Sources */,
 				4B3C70E31ED0575B000EBE8B /* ARCoordinator.swift in Sources */,
@@ -723,9 +794,14 @@
 				4B3C70DB1ED04BED000EBE8B /* BaseNavigationController.swift in Sources */,
 				4B3C71011ED0AF84000EBE8B /* FIlterTableViewCell.swift in Sources */,
 				4B4E53391ECC6E6E00539AE9 /* LoginService.swift in Sources */,
+				4BBC5BEC1ED10ADF00CD834C /* AnnotationView.swift in Sources */,
+				4BBC5BE81ED10A5F00CD834C /* PlaceViewController.swift in Sources */,
+				4BBC5BEE1ED10B0F00CD834C /* PlaceAnnotation.swift in Sources */,
 				4B3C70DF1ED05031000EBE8B /* LobbyViewController.swift in Sources */,
+				4BBC5BF81ED10C2500CD834C /* ARAnnotationView.swift in Sources */,
 				4BF370381ED0F5E40051ED46 /* UIImage+Gif.swift in Sources */,
 				4B64DE0D1ECF99130042941F /* MainCoordinator.swift in Sources */,
+				4BBC5BF61ED10C1C00CD834C /* ARAnnotation.swift in Sources */,
 				4B3C71041ED0D0D9000EBE8B /* DescriptionViewController.swift in Sources */,
 				4BF370331ED0F5E40051ED46 /* ChatViewController.swift in Sources */,
 				4B4E530B1ECC6E3400539AE9 /* AppDelegate.swift in Sources */,
