@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Detalji</title>
+
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/98a1849afa.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="dist/css/bootstrap.css">
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="dist/css/custom-style.css">
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+  </head>
+  <body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="container">
+        <a class="navbar-brand" href="#"><img src="img/favicon.png" width="30" height="30" alt=""></a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Akcije <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Administracija</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Karta</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Statistika</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <button type="button" class="btn btn-primary add-new-action"><i class="fa fa-plus mr-2" aria-hidden="true"></i>Nova akcija</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- MAP -->
+    <div id="map-canvas"></div>
+
+    <!-- CONTENT -->
+    <div class="container">
+      <div class="col-md-12 p-5 action-details">
+        <div class="row m-0">
+          <h5 class="">Potraga za izgubljenim djetetom na Sljemenu</h5>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="//maps.googleapis.com/maps/api/js?extension=.js&output=embed"></script>
+    <script src="custom-map.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script>
+    $('.slider').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 3
+});
+    </script>
+  </body>
+</html>

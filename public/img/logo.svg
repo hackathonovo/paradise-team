@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="379px" height="383px" viewBox="0 0 379 383" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44 (41411) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="90.9624666 161.132164 174.866243 262.735911 275.412677 0 379 379 0 379"></polygon>
+    </defs>
+    <g id="Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard-Copy" transform="translate(-57.000000, -29.000000)">
+            <g id="Group" transform="translate(57.000000, 29.000000)">
+                <g id="Rectangle-17">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#E39516" xlink:href="#path-1"></use>
+                    <path d="M185.538738,101.681064 C174.573085,90.3257981 222.770292,-0.0726223691 250.009594,5.23009759 C277.248896,10.5328175 290.575138,71.2360866 287.635507,103.92798 C281.573342,171.345859 219.558033,200.138578 219.558033,251.772109 C219.558033,303.40564 258.666763,362.898318 254.301658,401.004695 C244.941905,482.713212 207.695098,546.22347 223.09406,449.932279 C241.227226,336.543854 173.344279,298.917254 173.344279,260.024034 C173.344279,221.130813 223.752285,141.252351 185.538738,101.681064 Z" fill="#50E3C2" mask="url(#mask-2)" transform="translate(230.689993, 251.704825) rotate(-138.000000) translate(-230.689993, -251.704825) "></path>
+                </g>
+                <circle id="Oval" fill="#F6A623" cx="29" cy="354" r="19"></circle>
+                <circle id="Oval-Copy" fill="#8B572A" cx="43" cy="318" r="19"></circle>
+                <circle id="Oval-Copy-2" fill="#F6A623" cx="63" cy="347" r="19"></circle>
+                <circle id="Oval-Copy-3" fill="#9CBA50" cx="82" cy="318" r="19"></circle>
+                <circle id="Oval-Copy-4" fill="#F6A623" cx="61" cy="283" r="19"></circle>
+                <circle id="Oval-Copy-5" fill="#8B572A" cx="99" cy="283" r="19"></circle>
+                <circle id="Oval-Copy-6" fill="#F6A623" cx="82" cy="245" r="19"></circle>
+                <circle id="Oval-Copy-7" fill="#9CBA50" cx="120" cy="254" r="19"></circle>
+                <circle id="Oval-Copy-8" fill="#F6A623" cx="101" cy="209" r="19"></circle>
+                <circle id="Oval-Copy-9" fill="#F6A623" cx="140" cy="286" r="19"></circle>
+                <circle id="Oval-Copy-10" fill="#8B572A" cx="177" cy="280" r="19"></circle>
+                <circle id="Oval-Copy-11" fill="#F6A623" cx="214" cy="263" r="19"></circle>
+                <circle id="Oval-Copy-12" fill="#8B572A" cx="210" cy="226" r="19"></circle>
+                <circle id="Oval-Copy-13" fill="#9CBA50" cx="239" cy="226" r="19"></circle>
+                <circle id="Oval-Copy-14" fill="#F6A623" cx="230" cy="190" r="19"></circle>
+                <circle id="Oval-Copy-16" fill="#F6A623" cx="234" cy="153" r="19"></circle>
+                <circle id="Oval-Copy-17" fill="#8B572A" cx="266" cy="163" r="19"></circle>
+                <circle id="Oval-Copy-18" fill="#8B572A" cx="252" cy="117" r="19"></circle>
+                <circle id="Oval-Copy-19" fill="#F6A623" cx="290" cy="134" r="19"></circle>
+                <circle id="Oval-Copy-20" fill="#F6A623" cx="282" cy="92" r="19"></circle>
+                <circle id="Oval-Copy-21" fill="#8B572A" cx="261" cy="82" r="19"></circle>
+                <circle id="Oval-Copy-22" fill="#F6A623" cx="275" cy="43" r="19"></circle>
+                <circle id="Oval-Copy-28" fill="#8B572A" cx="252" cy="117" r="19"></circle>
+                <circle id="Oval-Copy-27" fill="#F6A623" cx="290" cy="134" r="19"></circle>
+                <circle id="Oval-Copy-26" fill="#9CBA50" cx="287" cy="100" r="19"></circle>
+                <circle id="Oval-Copy-51" fill="#8B572A" cx="246" cy="322" r="19"></circle>
+                <circle id="Oval-Copy-50" fill="#F6A623" cx="179" cy="364" r="19"></circle>
+                <circle id="Oval-Copy-49" fill="#9CBA50" cx="256" cy="355" r="19"></circle>
+                <circle id="Oval-Copy-48" fill="#F6A623" cx="293" cy="358" r="19"></circle>
+                <circle id="Oval-Copy-46" fill="#8B572A" cx="339.5" cy="345.5" r="24.5"></circle>
+                <circle id="Oval-Copy-45" fill="#8B572A" cx="292" cy="275" r="19"></circle>
+                <circle id="Oval-Copy-44" fill="#F6A623" cx="330" cy="292" r="19"></circle>
+                <circle id="Oval-Copy-43" fill="#F6A623" cx="322" cy="250" r="19"></circle>
+                <circle id="Oval-Copy-42" fill="#8B572A" cx="298" cy="236" r="19"></circle>
+                <circle id="Oval-Copy-41" fill="#F6A623" cx="315" cy="200" r="19"></circle>
+                <circle id="Oval-Copy-40" fill="#F6A623" cx="315" cy="200" r="19"></circle>
+                <circle id="Oval-Copy-39" fill="#8B572A" cx="211" cy="341" r="19"></circle>
+                <circle id="Oval-Copy-38" fill="#F6A623" cx="293" cy="358" r="19"></circle>
+                <circle id="Oval-Copy-37" fill="#9CBA50" cx="296" cy="317" r="19"></circle>
+                <circle id="Oval-Copy-36" fill="#8B572A" cx="292" cy="275" r="19"></circle>
+                <circle id="Oval-Copy-35" fill="#F6A623" cx="330" cy="292" r="19"></circle>
+                <circle id="Oval-Copy-34" fill="#F6A623" cx="322" cy="250" r="19"></circle>
+                <circle id="Oval-Copy-33" fill="#8B572A" cx="298" cy="236" r="19"></circle>
+                <circle id="Oval-Copy-32" fill="#9CBA50" cx="315" cy="200" r="19"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

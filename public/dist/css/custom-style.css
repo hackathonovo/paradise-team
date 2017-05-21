@@ -1,0 +1,97 @@
+html {
+ }
+
+body {
+  background-color: #272E3A; }
+
+.landing-video {
+  position: fixed;
+  width: 100%;
+  overflow: hidden; }
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999; }
+
+.logo {
+  margin-top: 10%; }
+
+.welcome-txt {
+  color: #ffffff;
+  letter-spacing: 1.5px; }
+  .welcome-txt h1 {
+    letter-spacing: 2.5px;
+    font-weight: lighter; }
+  .welcome-txt h2 {
+    letter-spacing: 2.5px;
+    font-weight: lighter; }
+
+.btn-action {
+  background-color: #F7BE15;
+  border: 0px;
+  border-radius: 50px; }
+  .btn-action a {
+    margin: 0 20px;
+    font-weight: normal;
+    color: #554000;
+    text-decoration: none; }
+  .btn-action:hover {
+    cursor: pointer;
+    background-color: #c89500; }
+    .btn-action:hover a {
+      color: #ffffff; }
+
+body {
+  background-color: #eee; }
+
+.action {
+  border-radius: 6px; }
+
+footer {
+  width: 100vw;
+  height: 80px;
+  background-color: #272E3A;
+  font-size: 0.8rem; }
+
+#map-canvas {
+  width: 100%;
+  height: 480px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden; }
+
+.action-details {
+  position: relative;
+  top: -80px;
+  height: auto; }
+
+.bg-featured {
+  background-color: #F7BE15; }
+
+.thead-inverse th {
+  background-color: #272E3A; }
+
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+body {
+  font-family: 'Raleway', sans-serif; }
+
+.navbar {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  z-index: 1; }
+
+p {
+  line-height: 1.8; }
+
+button:hover {
+  cursor: pointer;
+  box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.2); }
+
+.text-accent {
+  color: #F7BE15; }
