@@ -19,6 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         rootCoordinator = MainCoordinator()
         _ = rootCoordinator?.start()
         FIRApp.configure()
+        
+        if let bundle = Bundle.main.bundleIdentifier {
+            UserDefaults.standard.removePersistentDomain(forName: bundle)
+        }
         return true
     }
 
