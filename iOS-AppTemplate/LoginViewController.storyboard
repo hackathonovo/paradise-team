@@ -142,7 +142,13 @@
                             <outlet property="delegate" destination="x2j-kb-5mV" id="rqM-NJ-EJb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="udA-kz-mJV"/>
+                    <navigationItem key="navigationItem" id="udA-kz-mJV">
+                        <barButtonItem key="leftBarButtonItem" title="✕ Return" style="done" id="KHY-Id-Qbe">
+                            <connections>
+                                <action selector="ReturnButton:" destination="x2j-kb-5mV" id="b8a-hB-X3V"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FHe-Sh-dDm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
