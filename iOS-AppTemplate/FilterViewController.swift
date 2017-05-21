@@ -8,13 +8,19 @@
 
 import UIKit
 
-class FilterViewController: BaseViewController {
+
+class FilterViewController: UITableViewController {
     
     // MARK: - Dependencies
+    @IBOutlet weak var speolog: UISwitch!
+    @IBOutlet weak var alpinist: UISwitch!
+    @IBOutlet weak var medicina: UISwitch!
+    @IBOutlet weak var visokogorstvo: UISwitch!
+    @IBOutlet weak var planinar: UISwitch!
     
     var onShouldPopBlurScreen: (()-> Void)?
     
-    var models = ["Filter1", "Filter2", "Filter3", "Filter4", "Filter5"]
+    //var models = ["Filter1", "Filter2", "Filter3", "Filter4", "Filter5"]
     
     @IBOutlet weak var cancelButton: UIButton! {
         didSet {
@@ -24,7 +30,7 @@ class FilterViewController: BaseViewController {
     @IBOutlet weak var filterTableView: UITableView!
     
     @IBAction func cancelButtonTapped(_: UIButton) {
-        onShouldPopBlurScreen?()
+       // onShouldPopBlurScreen?()
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -38,48 +44,19 @@ class FilterViewController: BaseViewController {
         
         //viewModel.getFilteredData(data: models)
         onShouldPopBlurScreen?()
+        let manager = UserDefaultsManager()
+        manager.setValue(speolog.isOn, forKey: "speolog")
+        manager.setValue(alpinist.isOn, forKey: "alpinist")
+        manager.setValue(medicina.isOn, forKey: "medicina")
+        manager.setValue(visokogorstvo.isOn, forKey: "visokogorstvo")
+        manager.setValue(planinar.isOn, forKey: "planinar")
         self.dismiss(animated: true, completion: nil)
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        filterTableView.delegate = self
-        filterTableView.dataSource = self
+
         
     }
-}
-extension FilterViewController: UITableViewDelegate, UITableViewDataSource {
-    
-    func numberOfSections(in _: UITableView) -> Int {
-        return models.count
-    }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section < models.count {
-            return "Section \(section + 1)"
-        }
-        return nil
-    }
-    
-    func tableView(_: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // swiftlint:disable next force_cast
-        let cell = tableView.dequeueReusableCell(withIdentifier: "filterTableViewCell", for: indexPath) as! FilterTableViewCell
-        
-        cell.selectionStyle = .none
-        
-        //        cell.titleLabel.text = models[indexPath.section].filter[indexPath.row].title
-        //        cell.toggle.isOn = models[indexPath.section].filter[indexPath.row].isActive
-        
-        cell.onSwitch = {
-            //            self.models[indexPath.section].filter[indexPath.row].isActive = !self.viewModel.data[indexPath.section].filter[indexPath.row].isActive
-        }
-        
-        return cell
-    }
-    
 }

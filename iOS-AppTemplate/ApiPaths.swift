@@ -13,6 +13,8 @@ enum ApiPaths {
     static let login: String = "/token"
     static let user: String = "/api/user"
     static let actions: String = "/api/actions"
+    static let userFilter: String = "/api/user/filter"
+    static let createAction: String = "/api/action/create"
     
     
 }

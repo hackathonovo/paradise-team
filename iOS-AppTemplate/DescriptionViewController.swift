@@ -13,10 +13,10 @@ class DescriptionViewController: BaseViewController, UITextViewDelegate {
     @IBOutlet weak var textView: UITextView!
     @IBAction func sendAction(_ sender: UIButton) {
         //self.rootNavigationController?.dismiss(animated: true, completion: {
-        shouldDismissNavigationController?()
+        shouldDismissNavigationController?(textView.text!)
     }
     
-    var shouldDismissNavigationController: (()-> Void)?
+    var shouldDismissNavigationController: ((String)-> Void)?
     var rootNavigationController: BaseNavigationController?
     
     override func viewDidLoad() {

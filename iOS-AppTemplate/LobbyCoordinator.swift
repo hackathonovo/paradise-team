@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class LobbyCoordinator: Coordinator {
     
@@ -94,34 +95,48 @@ class LobbyCoordinator: Coordinator {
     
     func showCreateEditAction() {
         let createEditAction = CreateEditActionViewController.instance()
-        createEditAction.onShouldNavigateToUserList = { [weak self] in
+        createEditAction.onShouldNavigateToUserList = { [weak self] title, range, coordinates in
             
-            self?.showCreateUsersListViewController()
+            self?.showCreateUsersListViewController(title,range,coordinates)
             
         }
         navigationController.pushViewController(createEditAction, animated: true)
     }
     
-    func showCreateUsersListViewController() {
+    func showCreateUsersListViewController(_ title: String, _ range: Double, _ coords:CLLocationCoordinate2D ) {
         let usersListViewController = UsersListViewController.instance()
+        usersListViewController.actionTitle = title
+        usersListViewController.range = range
+        usersListViewController.coords = coords
         usersListViewController.rootViewController = navigationController
-        usersListViewController.onShouldNavigateToDescriptionViewController = { [weak self] in
-            self?.showDescriptionViewController()
+        usersListViewController.onShouldNavigateToDescriptionViewController = { [weak self] users, coords, range, title in
+            self?.showDescriptionViewController(users,coords, range, title)
         }
         
         navigationController.pushViewController(usersListViewController, animated: true)
     }
     
     
-    func showDescriptionViewController() {
+    func showDescriptionViewController(_ users: [User], _ coords: CLLocationCoordinate2D, _ range: Double, _ title: String) {
         let descriptionViewController = DescriptionViewController.instance()
-        descriptionViewController.shouldDismissNavigationController = { [weak self] in
-            self?.navigationController.dismiss(animated: true, completion: {})
-            _ = self?.start()
+        descriptionViewController.shouldDismissNavigationController = { [weak self] description in
+            
+            self?.makeRequest(users, coords, range, title, description, onComplete: { [weak self] in 
+                self?.navigationController.dismiss(animated: true, completion: {})
+                _ = self?.start()
+            })
+            
+
+            
         }
         navigationController.pushViewController(descriptionViewController, animated: true)
     }
     
+    
+    func makeRequest(_ users: [User], _ coords: CLLocationCoordinate2D, _ range: Double, _ title: String, _ description: String, onComplete: @escaping ()-> Void) {
+        let service = ActionService()
+        service.createAction(users, coords, range, title, description, onComplete: onComplete)
+    }
     
     
     

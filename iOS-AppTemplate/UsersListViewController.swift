@@ -7,23 +7,30 @@
 //
 
 import UIKit
+import MapKit
+
 
 class UsersListViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var usersListTableView: UITableView!
     
     var rootViewController: BaseNavigationController?
-    var onShouldNavigateToDescriptionViewController: (()-> Void)?
-
+    var onShouldNavigateToDescriptionViewController: (([User],CLLocationCoordinate2D ,Double, String)-> Void)?
+    
+    var actionTitle: String?
+    var range: Double?
+    var coords: CLLocationCoordinate2D?
+    
     //MARK: - Outlets
     
     //MARK: - Model
     
-    var model: [String] = ["janko", "marko", "pero", "armando", "klosar", "seljak", "sedma", "osma", "deveta", "deseta",]
-    
+    var model: [User] = []
     //MARK: - Lifecycle
     
     override func viewDidLoad() {
+        
+        loadData()
         
         let rightBarButtonItemFilter = UIBarButtonItem(title: "⚙️", style: .plain, target: self, action: #selector(showFilter))
         let rightBarButtonItemNext = UIBarButtonItem(title: "Dalje", style: .done, target: self, action: #selector(nextTapped))
@@ -33,6 +40,34 @@ class UsersListViewController: BaseViewController, UITableViewDelegate, UITableV
         self.navigationItem.rightBarButtonItems = [rightBarButtonItemNext, rightBarButtonItemFilter]
         
         
+    }
+    
+    func castToBool(_ string: String) -> Bool {
+        switch string {
+        case "true": return true
+        case "false": return false
+        default: return false
+        }
+    }
+    
+    func loadData() {
+        
+        let manager = UserDefaultsManager()
+        
+//        let flag1 = castToBool((manager.getValue(forKey: "speolog")?)!)
+//        let flag2 = castToBool((manager.getValue(forKey: "alpinist")?)!)
+//        let flag3 = castToBool((manager.getValue(forKey: "medicina")?)!)
+//        let flag4 = castToBool((manager.getValue(forKey: "visokogorstvo")?)!)
+//        let flag5 = castToBool((manager.getValue(forKey: "penjanje")?)!)
+//        
+        
+        
+        let actionsService = ActionService()
+        actionsService.getUsers(latitude: (coords?.latitude)!, longitude: (coords?.longitude)!, flag1: true, flag2: true, flag3: false, flag4: false, flag5: true) { [weak self] (users) in
+            self?.model = users
+            self?.usersListTableView.reloadData()
+
+        }
     }
     
     //MARK: - FILTER
@@ -51,25 +86,26 @@ class UsersListViewController: BaseViewController, UITableViewDelegate, UITableV
     
     func showFilter() {
         
-        let filterVC = FilterViewController.instance()
+        let filterVC = UIStoryboard(name: "FilterViewController", bundle: nil).instantiateViewController(withIdentifier: "FilterViewController")
+
         
-        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.frame = filterVC.view.bounds
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        let lastIndex = navigationController?.view.subviews.count
-        navigationController!.view.insertSubview(blurEffectView, at: lastIndex!)
-        
+//        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
+//        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+//        blurEffectView.frame = filterVC.view.bounds
+//        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+//        let lastIndex = navigationController?.view.subviews.count
+//        navigationController!.view.insertSubview(blurEffectView, at: lastIndex!)
+//        
         
         filterVC.modalPresentationStyle = .overFullScreen
-        filterVC.onShouldPopBlurScreen = { _ in
-            blurEffectView.removeFromSuperview()
-        }
+//        filterVC.onShouldPopBlurScreen = { _ in
+//            blurEffectView.removeFromSuperview()
+//        }
         navigationController!.present(filterVC, animated: true, completion: nil)
     }
 //
     func nextTapped() {
-        onShouldNavigateToDescriptionViewController?()
+        onShouldNavigateToDescriptionViewController?(model, coords!, range!, actionTitle!)
     }
     
     
@@ -91,7 +127,7 @@ class UsersListViewController: BaseViewController, UITableViewDelegate, UITableV
             return UITableViewCell()
         }
         
-        cell.titleLabel.text = model[indexPath.row]
+        cell.titleLabel.text = model[indexPath.row].firstName + " " + model[indexPath.row].lastName
         
         return cell
     }

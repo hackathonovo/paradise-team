@@ -46,6 +46,7 @@
 		4B92B5F31ED0E4F8001362E5 /* ActionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B92B5F21ED0E4F8001362E5 /* ActionDetailsViewController.swift */; };
 		4BA29A151ED13258007707C7 /* ActionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA29A141ED13258007707C7 /* ActionsService.swift */; };
 		4BA29A171ED133BC007707C7 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA29A161ED133BC007707C7 /* Action.swift */; };
+		4BA29A191ED152CD007707C7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA29A181ED152CD007707C7 /* User.swift */; };
 		4BBC5BE31ED0FA9500CD834C /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BBC5BE21ED0FA9500CD834C /* LoginViewController.storyboard */; };
 		4BBC5BE81ED10A5F00CD834C /* PlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBC5BE71ED10A5F00CD834C /* PlaceViewController.swift */; };
 		4BBC5BEA1ED10ABA00CD834C /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBC5BE91ED10ABA00CD834C /* Place.swift */; };
@@ -142,6 +143,7 @@
 		4B92B5F21ED0E4F8001362E5 /* ActionDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionDetailsViewController.swift; sourceTree = "<group>"; };
 		4BA29A141ED13258007707C7 /* ActionsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionsService.swift; sourceTree = "<group>"; };
 		4BA29A161ED133BC007707C7 /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		4BA29A181ED152CD007707C7 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4BBC5BE21ED0FA9500CD834C /* LoginViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
 		4BBC5BE71ED10A5F00CD834C /* PlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceViewController.swift; sourceTree = "<group>"; };
 		4BBC5BE91ED10ABA00CD834C /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
@@ -402,6 +404,7 @@
 			children = (
 				4B4E53441ECDB82B00539AE9 /* Token.swift */,
 				4BA29A161ED133BC007707C7 /* Action.swift */,
+				4BA29A181ED152CD007707C7 /* User.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -798,6 +801,7 @@
 			files = (
 				4BBC5BF01ED10B3000CD834C /* PlacesLoader.swift in Sources */,
 				4BBC5C001ED10C4B00CD834C /* DebugMapViewController.swift in Sources */,
+				4BA29A191ED152CD007707C7 /* User.swift in Sources */,
 				4BF370321ED0F5E40051ED46 /* ChannelListViewController.swift in Sources */,
 				4B3C70FD1ED0AE73000EBE8B /* FilterViewController.swift in Sources */,
 				4B3C70FA1ED0A6F5000EBE8B /* UsersListTableViewCell.swift in Sources */,

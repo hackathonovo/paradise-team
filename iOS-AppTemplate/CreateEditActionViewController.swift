@@ -16,8 +16,9 @@ class CreateEditActionViewController: BaseViewController, MKMapViewDelegate, UIG
     @IBOutlet weak var horizontalSlider: UISlider!
     
     private var annotationIsSet = false
+    private var coords: CLLocationCoordinate2D?
     
-    var onShouldNavigateToUserList: (()-> Void)?
+    var onShouldNavigateToUserList: ((_ title: String, _ range: Double, _ coordinates: CLLocationCoordinate2D) -> Void)?
     
     
     
@@ -45,7 +46,7 @@ class CreateEditActionViewController: BaseViewController, MKMapViewDelegate, UIG
     
     func nextTapped() {
     
-        onShouldNavigateToUserList?()
+        onShouldNavigateToUserList?(titleTextField.text!, Double(horizontalSlider.value), self.coords!)
     }
     
     
@@ -80,6 +81,7 @@ class CreateEditActionViewController: BaseViewController, MKMapViewDelegate, UIG
         addRadiusCircle(location: newCoordinates)
         let annotation = MKPointAnnotation()
         annotation.coordinate = newCoordinates
+        self.coords = newCoordinates
         mapView.addAnnotation(annotation)
         annotationIsSet = true
     }
