@@ -24,12 +24,12 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Qew-CL-dKr">
                                 <rect key="frame" x="87" y="108" width="200" height="450"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="74h-wr-sX7">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="74h-wr-sX7" customClass="UIImageView">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bk6-u0-slj">
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
-                                                <state key="normal" title="Current">
+                                                <state key="normal" backgroundImage="Group">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
@@ -47,12 +47,12 @@
                                             <constraint firstAttribute="bottom" secondItem="bk6-u0-slj" secondAttribute="bottom" id="zzz-tX-pzq"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mi2-Ld-UMQ">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mi2-Ld-UMQ" customClass="UIImageView">
                                         <rect key="frame" x="0.0" y="250" width="200" height="200"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dK1-L5-Y9z">
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
-                                                <state key="normal" title="New">
+                                                <state key="normal" backgroundImage="Group 2">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
@@ -85,4 +85,8 @@
             <point key="canvasLocation" x="-316" y="59.820089955022496"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Group" width="219" height="219"/>
+        <image name="Group 2" width="219" height="219"/>
+    </resources>
 </document>

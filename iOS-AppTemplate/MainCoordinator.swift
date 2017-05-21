@@ -106,8 +106,8 @@ extension MainCoordinator {
 
 extension UITabBarItem {
     
-    static let lobby = UITabBarItem(title: nil, image: #imageLiteral(resourceName: "icn_home"), selectedImage: nil)
-    static let AR = UITabBarItem(title: nil, image: #imageLiteral(resourceName: "icn_arrow"), selectedImage: nil)
+    static let lobby = UITabBarItem(title: nil, image: #imageLiteral(resourceName: "Shape4"), selectedImage: #imageLiteral(resourceName: "Shape466"))
+    static let AR = UITabBarItem(title: nil, image: #imageLiteral(resourceName: "Shape"), selectedImage: #imageLiteral(resourceName: "Shape74346"))
     
 }
 

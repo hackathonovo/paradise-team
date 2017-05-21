@@ -87,13 +87,12 @@
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGI-55-gUA">
                                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                                        <state key="normal" title="Button"/>
+                                                                        <state key="normal" backgroundImage="Group 22"/>
                                                                         <connections>
                                                                             <action selector="initChat:" destination="xAb-sw-xpS" eventType="touchUpInside" id="Z1g-Il-oK6"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
-                                                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstItem="SGI-55-gUA" firstAttribute="centerY" secondItem="HTh-z7-oYV" secondAttribute="centerY" id="0Zs-Ak-EeI"/>
                                                                     <constraint firstItem="SGI-55-gUA" firstAttribute="height" secondItem="HTh-z7-oYV" secondAttribute="height" id="JOD-as-BDB"/>
@@ -120,13 +119,12 @@
                                                                 <subviews>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yG2-Cx-WVs">
                                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                                        <state key="normal" title="call"/>
+                                                                        <state key="normal" backgroundImage="Group44"/>
                                                                         <connections>
                                                                             <action selector="callOrganisator:" destination="xAb-sw-xpS" eventType="touchUpInside" id="HSa-0S-6to"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
-                                                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstItem="yG2-Cx-WVs" firstAttribute="width" secondItem="dzq-ih-R7N" secondAttribute="width" id="6DV-aS-Xpv"/>
                                                                     <constraint firstItem="yG2-Cx-WVs" firstAttribute="centerX" secondItem="dzq-ih-R7N" secondAttribute="centerX" id="oki-oA-uy5"/>
@@ -150,7 +148,18 @@
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T6x-Wm-ucz">
                                                                 <rect key="frame" x="25" y="25" width="50" height="50"/>
-                                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lk3-bM-85l">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                        <state key="normal" backgroundImage="Group 3"/>
+                                                                    </button>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="Lk3-bM-85l" firstAttribute="centerX" secondItem="T6x-Wm-ucz" secondAttribute="centerX" id="HIo-vn-BHF"/>
+                                                                    <constraint firstItem="Lk3-bM-85l" firstAttribute="centerY" secondItem="T6x-Wm-ucz" secondAttribute="centerY" id="LAp-Te-zFK"/>
+                                                                    <constraint firstItem="Lk3-bM-85l" firstAttribute="height" secondItem="T6x-Wm-ucz" secondAttribute="height" id="Lbf-g4-dj5"/>
+                                                                    <constraint firstItem="Lk3-bM-85l" firstAttribute="width" secondItem="T6x-Wm-ucz" secondAttribute="width" id="uDS-aw-rSi"/>
+                                                                </constraints>
                                                             </view>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -211,4 +220,9 @@
             <point key="canvasLocation" x="77.599999999999994" y="187.55622188905548"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Group 22" width="50" height="50"/>
+        <image name="Group 3" width="50" height="50"/>
+        <image name="Group44" width="50" height="50"/>
+    </resources>
 </document>
