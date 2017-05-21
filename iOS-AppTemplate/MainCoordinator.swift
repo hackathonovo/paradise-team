@@ -9,18 +9,19 @@
 import UIKit
 
 public protocol Coordinator: class {
-
+    
     @discardableResult
     func start() -> UIViewController
 }
 
 class MainCoordinator: Coordinator {
     
-    //private var userDefaultsManager: UserDefaultsManager
-    //private var onBoardingCoordinator: OnBoardingCoordinator?
+    private var userDefaultsManager: UserDefaultsManager
+    private var onBoardingCoordinator: OnBoardingCoordinator?
     
     init() {
         //self.persistenceService = persistenceService
+        self.userDefaultsManager = UserDefaultsManager()
     }
     
     fileprivate var childCoordinators: [Coordinator] = [
@@ -28,30 +29,42 @@ class MainCoordinator: Coordinator {
         ARCoordinator()
     ]
     
-//    @discardableResult
-//    func start()-> UIViewController {
-//        
-////         if persistenceService.isFirstUse {
-////            persistenceService.isFirstUse = false
-////            return createOnboarding()
-////        } else {
-//            return startLobby()
-////        }
-//    }
+    @discardableResult
+    func start()-> UIViewController {
+        
+        if let value = UserDefaultsManager().getValue(forKey: "userType")  {
+            return startLobby()
+            
+        } else {
+            return createOnboarding()
+        }
+    }
     
-//    private func createOnboarding()-> UIViewController {
-////        onBoardingCoordinator = OnBoardingCoordinator()
-////        onBoardingCoordinator!.onComplete = { [weak self] in
-////            self?.startFeed()
-////            self?.onBoardingCoordinator = nil
-////        }
-////        let onBoardingController = onBoardingCoordinator!.start()
-////        onBoardingController.showAsRoot()
-////        return onBoardingController
-//    }
+    private func createOnboarding()-> UIViewController {
+        onBoardingCoordinator = OnBoardingCoordinator()
+        onBoardingCoordinator!.onComplete = { [weak self] userType in
+            let manager = UserDefaultsManager()
+            var value: String? = nil
+            switch userType {
+            case .leader:
+                value = "leader"
+            case .user:
+                value = "user"
+            }
+            
+        
+            manager.setValue(value!, forKey: "userType")
+            
+            self?.startLobby()
+            self?.onBoardingCoordinator = nil
+        }
+        let onBoardingController = onBoardingCoordinator!.start()
+        onBoardingController.showAsRoot()
+        return onBoardingController
+    }
     
     @discardableResult
-     func start()-> UIViewController {
+    func startLobby()-> UIViewController {
         let tabBarController = createTabBarController()
         tabBarController.showAsRoot()
         return tabBarController
@@ -68,8 +81,8 @@ extension MainCoordinator {
             
         case is ARCoordinator:
             return .AR
-//        case is UserProfileCoordinator:
-//            return .userProfile
+            //        case is UserProfileCoordinator:
+        //            return .userProfile
         default:
             fatalError("No tab bar set for this coordinator!")
         }

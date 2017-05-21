@@ -50,7 +50,7 @@ class LoginService: NetworkingServiceProtocol {
         let accessToken = manager.getValue(forKey: "access_token")
         let tokenType = manager.getValue(forKey: "token_type")
         
-        let header = ["Authorization": tokenType + " " + accessToken]
+        let header = ["Authorization": tokenType! + " " + accessToken!]
         
         makeRequest(with: ApiPaths.user, method: .get, parameters: [:], headers: header, completion: { response in
             

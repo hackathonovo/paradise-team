@@ -44,6 +44,8 @@
 		4B64DE0D1ECF99130042941F /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B64DE0C1ECF99130042941F /* MainCoordinator.swift */; };
 		4B92B5F11ED0E4E8001362E5 /* ActionDetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B92B5F01ED0E4E8001362E5 /* ActionDetailsViewController.storyboard */; };
 		4B92B5F31ED0E4F8001362E5 /* ActionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B92B5F21ED0E4F8001362E5 /* ActionDetailsViewController.swift */; };
+		4BA29A151ED13258007707C7 /* ActionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA29A141ED13258007707C7 /* ActionsService.swift */; };
+		4BA29A171ED133BC007707C7 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA29A161ED133BC007707C7 /* Action.swift */; };
 		4BBC5BE31ED0FA9500CD834C /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BBC5BE21ED0FA9500CD834C /* LoginViewController.storyboard */; };
 		4BBC5BE81ED10A5F00CD834C /* PlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBC5BE71ED10A5F00CD834C /* PlaceViewController.swift */; };
 		4BBC5BEA1ED10ABA00CD834C /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBC5BE91ED10ABA00CD834C /* Place.swift */; };
@@ -62,6 +64,9 @@
 		4BBC5C041ED10C6200CD834C /* hdar_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BBC5C031ED10C6200CD834C /* hdar_close.png */; };
 		4BBC5C061ED10C6800CD834C /* hdar_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BBC5C051ED10C6800CD834C /* hdar_close@2x.png */; };
 		4BBC5C081ED10C7000CD834C /* hdar_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BBC5C071ED10C7000CD834C /* hdar_close@3x.png */; };
+		4BDBDEE91ED11463007D41CF /* OnBoardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDBDEE81ED11463007D41CF /* OnBoardingCoordinator.swift */; };
+		4BDBDEEC1ED118AC007D41CF /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDBDEEB1ED118AC007D41CF /* OnBoardingViewController.swift */; };
+		4BDBDEEE1ED11950007D41CF /* OnBoardingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BDBDEED1ED11950007D41CF /* OnBoardingViewController.storyboard */; };
 		4BF370311ED0F5E40051ED46 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF370271ED0F5E40051ED46 /* Channel.swift */; };
 		4BF370321ED0F5E40051ED46 /* ChannelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF370281ED0F5E40051ED46 /* ChannelListViewController.swift */; };
 		4BF370331ED0F5E40051ED46 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF3702B1ED0F5E40051ED46 /* ChatViewController.swift */; };
@@ -135,6 +140,8 @@
 		4B64DE0C1ECF99130042941F /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		4B92B5F01ED0E4E8001362E5 /* ActionDetailsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ActionDetailsViewController.storyboard; sourceTree = "<group>"; };
 		4B92B5F21ED0E4F8001362E5 /* ActionDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionDetailsViewController.swift; sourceTree = "<group>"; };
+		4BA29A141ED13258007707C7 /* ActionsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionsService.swift; sourceTree = "<group>"; };
+		4BA29A161ED133BC007707C7 /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		4BBC5BE21ED0FA9500CD834C /* LoginViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
 		4BBC5BE71ED10A5F00CD834C /* PlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceViewController.swift; sourceTree = "<group>"; };
 		4BBC5BE91ED10ABA00CD834C /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
@@ -153,6 +160,9 @@
 		4BBC5C031ED10C6200CD834C /* hdar_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hdar_close.png; path = HDAugmentedReality/Resources/hdar_close.png; sourceTree = "<group>"; };
 		4BBC5C051ED10C6800CD834C /* hdar_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hdar_close@2x.png"; path = "HDAugmentedReality/Resources/hdar_close@2x.png"; sourceTree = "<group>"; };
 		4BBC5C071ED10C7000CD834C /* hdar_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hdar_close@3x.png"; path = "HDAugmentedReality/Resources/hdar_close@3x.png"; sourceTree = "<group>"; };
+		4BDBDEE81ED11463007D41CF /* OnBoardingCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingCoordinator.swift; sourceTree = "<group>"; };
+		4BDBDEEB1ED118AC007D41CF /* OnBoardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		4BDBDEED1ED11950007D41CF /* OnBoardingViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OnBoardingViewController.storyboard; sourceTree = "<group>"; };
 		4BF370261ED0F5E30051ED46 /* iOS-AppTemplate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS-AppTemplate-Bridging-Header.h"; sourceTree = "<group>"; };
 		4BF370271ED0F5E40051ED46 /* Channel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		4BF370281ED0F5E40051ED46 /* ChannelListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelListViewController.swift; sourceTree = "<group>"; };
@@ -366,6 +376,7 @@
 			children = (
 				4B64DE081ECDF29F0042941F /* UserDefaultsManager.swift */,
 				4B4E53381ECC6E6E00539AE9 /* LoginService.swift */,
+				4BA29A141ED13258007707C7 /* ActionsService.swift */,
 				4B64DE0B1ECDF4740042941F /* Networking */,
 				4B64DE0A1ECDF4600042941F /* Models */,
 			);
@@ -377,6 +388,7 @@
 			children = (
 				4B4E53131ECC6E3400539AE9 /* LaunchScreen.storyboard */,
 				4B64DE0C1ECF99130042941F /* MainCoordinator.swift */,
+				4BDBDEE71ED1143D007D41CF /* OnBoarding */,
 				4B3C70E51ED057ED000EBE8B /* BASE */,
 				4B3C70E61ED05815000EBE8B /* AR */,
 				4B3C70E41ED057D5000EBE8B /* Lobby */,
@@ -389,6 +401,7 @@
 			isa = PBXGroup;
 			children = (
 				4B4E53441ECDB82B00539AE9 /* Token.swift */,
+				4BA29A161ED133BC007707C7 /* Action.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -433,6 +446,24 @@
 				4BBC5BF31ED10BA200CD834C /* HDAugmentedReality */,
 			);
 			name = Places;
+			sourceTree = "<group>";
+		};
+		4BDBDEE71ED1143D007D41CF /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				4BDBDEE81ED11463007D41CF /* OnBoardingCoordinator.swift */,
+				4BDBDEEA1ED11898007D41CF /* OnBoardingViewController */,
+			);
+			name = OnBoarding;
+			sourceTree = "<group>";
+		};
+		4BDBDEEA1ED11898007D41CF /* OnBoardingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4BDBDEEB1ED118AC007D41CF /* OnBoardingViewController.swift */,
+				4BDBDEED1ED11950007D41CF /* OnBoardingViewController.storyboard */,
+			);
+			name = OnBoardingViewController;
 			sourceTree = "<group>";
 		};
 		4BF370251ED0F5B70051ED46 /* SOCKET CHAT */ = {
@@ -585,6 +616,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BBC5BF41ED10BA200CD834C /* HDAugmentedReality in Resources */,
+				4BDBDEEE1ED11950007D41CF /* OnBoardingViewController.storyboard in Resources */,
 				4B92B5F11ED0E4E8001362E5 /* ActionDetailsViewController.storyboard in Resources */,
 				4B3C70F41ED0A36E000EBE8B /* UsersListViewController.storyboard in Resources */,
 				4B3C71061ED0D114000EBE8B /* DescriptionViewController.storyboard in Resources */,
@@ -771,6 +803,7 @@
 				4B3C70FA1ED0A6F5000EBE8B /* UsersListTableViewCell.swift in Sources */,
 				4B3C70F21ED06FCC000EBE8B /* CreateEditActionViewController.swift in Sources */,
 				4B4E530D1ECC6E3400539AE9 /* ViewController.swift in Sources */,
+				4BA29A171ED133BC007707C7 /* Action.swift in Sources */,
 				4BBC5BFE1ED10C3600CD834C /* ARViewController.swift in Sources */,
 				4BF370361ED0F5E40051ED46 /* LoginViewController.swift in Sources */,
 				4B3C70EB1ED06343000EBE8B /* ActionsTableViewCell.swift in Sources */,
@@ -794,6 +827,7 @@
 				4B3C70DB1ED04BED000EBE8B /* BaseNavigationController.swift in Sources */,
 				4B3C71011ED0AF84000EBE8B /* FIlterTableViewCell.swift in Sources */,
 				4B4E53391ECC6E6E00539AE9 /* LoginService.swift in Sources */,
+				4BDBDEE91ED11463007D41CF /* OnBoardingCoordinator.swift in Sources */,
 				4BBC5BEC1ED10ADF00CD834C /* AnnotationView.swift in Sources */,
 				4BBC5BE81ED10A5F00CD834C /* PlaceViewController.swift in Sources */,
 				4BBC5BEE1ED10B0F00CD834C /* PlaceAnnotation.swift in Sources */,
@@ -801,11 +835,13 @@
 				4BBC5BF81ED10C2500CD834C /* ARAnnotationView.swift in Sources */,
 				4BF370381ED0F5E40051ED46 /* UIImage+Gif.swift in Sources */,
 				4B64DE0D1ECF99130042941F /* MainCoordinator.swift in Sources */,
+				4BA29A151ED13258007707C7 /* ActionsService.swift in Sources */,
 				4BBC5BF61ED10C1C00CD834C /* ARAnnotation.swift in Sources */,
 				4B3C71041ED0D0D9000EBE8B /* DescriptionViewController.swift in Sources */,
 				4BF370331ED0F5E40051ED46 /* ChatViewController.swift in Sources */,
 				4B4E530B1ECC6E3400539AE9 /* AppDelegate.swift in Sources */,
 				4BF370341ED0F5E40051ED46 /* CreateChannelCell.swift in Sources */,
+				4BDBDEEC1ED118AC007D41CF /* OnBoardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

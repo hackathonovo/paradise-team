@@ -14,32 +14,71 @@ class LobbyCoordinator: Coordinator {
     internal var childCoordinators: [Coordinator] = []
     
     func start() -> UIViewController {
-        let lobby = LobbyViewController.instance()
         
-        lobby.onShouldGoToActionsList = { [weak self] in
-            self?.showActionsList()
+        let userType = UserDefaultsManager().getValue(forKey: "userType")
+        
+        switch userType! {
+        case "leader":
+            
+            let lobby = LobbyViewController.instance()
+            
+            lobby.onShouldGoToActionsList = { [weak self] in
+                self?.showActionsList()
+            }
+            
+            lobby.onShouldGoToCreateAction = { [weak self] in
+                self?.showCreateEditAction()
+            }
+            
+            navigationController.viewControllers = [lobby]
+            lobby.navigationBarDisplayMode = .always
+            return navigationController
+            
+            
+            
+        case "user":
+            let actionsList = ActionsTableViewController.instance()
+            navigationController.viewControllers = [actionsList]
+            actionsList.navigationBarDisplayMode = .always
+            actionsList.onShouldShowActionDetails = { [weak self] action in
+                
+                self?.showActionDetails(action: action)
+            }
+
+            return navigationController
+            
+        default:
+            
+            let lobby = LobbyViewController.instance()
+            
+            lobby.onShouldGoToActionsList = { [weak self] in
+                self?.showActionsList()
+            }
+            
+            lobby.onShouldGoToCreateAction = { [weak self] in
+                self?.showCreateEditAction()
+            }
+            
+            navigationController.viewControllers = [lobby]
+            lobby.navigationBarDisplayMode = .always
+            return navigationController
+
         }
         
-        lobby.onShouldGoToCreateAction = { [weak self] in
-            self?.showCreateEditAction()
-        }
-        
-        navigationController.viewControllers = [lobby]
-        lobby.navigationBarDisplayMode = .always
-        return navigationController
     }
     
     func showActionsList() {
         let actionsList = ActionsTableViewController.instance()
         navigationController.pushViewController(actionsList, animated: true)
-        actionsList.onShouldShowActionDetails = { [weak self] index in
+        actionsList.onShouldShowActionDetails = { [weak self] action in
             
-            self?.showActionDetails(index: index)
+            self?.showActionDetails(action: action)
         }
     }
     
-    func showActionDetails(index: Int) {
+    func showActionDetails(action: Action) {
         let actionDetailsVC = ActionDetailsViewController.instance()
+        actionDetailsVC.model = action
         actionDetailsVC.shouldInitChat = { [weak self] in
             self?.initChat()
         }
@@ -49,7 +88,7 @@ class LobbyCoordinator: Coordinator {
     
     func initChat() {
         let chatVC = LoginViewController.instance()
- 
+        
         navigationController.pushViewController(chatVC, animated: true)
     }
     

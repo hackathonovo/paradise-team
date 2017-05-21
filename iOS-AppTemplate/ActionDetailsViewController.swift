@@ -23,6 +23,22 @@ class ActionDetailsViewController: BaseViewController, MKMapViewDelegate, UIGest
     @IBOutlet weak var horizontalSlider: UISlider!
     var annotationIsSet = false
     
+    var model: Action? {
+        didSet {
+            
+            
+        }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        
+        horizontalSlider.value = Float(model!.range / 100)
+        makeAnnotation(coords: CLLocationCoordinate2D(latitude: model!.latitude, longitude: model!.longitude))
+        
+        titleLabel.text = model?.title
+        statusLabel.text = model?.id
+    }
+    
     
     
     var shouldInitChat: (()-> Void)?
@@ -30,7 +46,7 @@ class ActionDetailsViewController: BaseViewController, MKMapViewDelegate, UIGest
     @IBAction func initChat(_ sender: UIButton) {
         shouldInitChat?()
     }
- 
+    
     
     @IBAction func callOrganisator(_ sender: UIButton) {
         
@@ -72,14 +88,21 @@ class ActionDetailsViewController: BaseViewController, MKMapViewDelegate, UIGest
         }
         
         let touchPoint = gestureRecognizer.location(in: mapView)
-        
-        
         let newCoordinates = mapView.convert(touchPoint, toCoordinateFrom: mapView)
-        addRadiusCircle(location: newCoordinates)
+        
+        
+        makeAnnotation(coords: newCoordinates)
+    }
+    
+    func makeAnnotation (coords: CLLocationCoordinate2D) {
+        
+        
+        addRadiusCircle(location: coords)
         let annotation = MKPointAnnotation()
-        annotation.coordinate = newCoordinates
+        annotation.coordinate = coords
         mapView.addAnnotation(annotation)
         annotationIsSet = true
+        
     }
     
     private func addRadiusCircle(location: CLLocationCoordinate2D){

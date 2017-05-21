@@ -16,27 +16,47 @@ class ActionsTableViewController: BaseViewController, UITableViewDelegate, UITab
     
     //MARK: - Model
     
-    var model: [String] = ["prva", "druga", "treca", "cetvrta", "peta", "sesta", "sedma", "osma", "deveta", "deseta",]
-    
+   // var model: [String] = ["prva", "druga", "treca", "cetvrta", "peta", "sesta", "sedma", "osma", "deveta", "deseta",]
+    var actions: [Action] = [] {
+        didSet {
+            self.actionsTableView.reloadData()
+        }
+    }
     //MARK: - Lifecycle
 
-    var onShouldShowActionDetails: ((Int)-> Void)?
+    var onShouldShowActionDetails: ((Action)-> Void)?
+    
+    func makeRequest() {
+        
+        let actionService = ActionService()
+        actionService.getActions(onComplete: { [weak self] actions in
+            
+            self?.actions = actions
+        })
+        
+        
+        
+    }
+    
+    override func viewDidLoad() {
+        makeRequest()
+    }
     
     // MARK: - Table view data source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return self.model.count
+        return self.actions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ActionsTableViewCell", for: indexPath) as! ActionsTableViewCell
-        guard (indexPath as IndexPath).row < model.count else {
+        guard (indexPath as IndexPath).row < actions.count else {
             
             return UITableViewCell()
         }
         
-        cell.titleLabel.text = model[indexPath.row]
+        cell.titleLabel.text = actions[indexPath.row].title
         
         return cell
     }
@@ -50,7 +70,7 @@ class ActionsTableViewController: BaseViewController, UITableViewDelegate, UITab
     // Override to support editing the table view.
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            model.remove(at: (indexPath as IndexPath).row)
+            actions.remove(at: (indexPath as IndexPath).row)
             
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
@@ -66,7 +86,7 @@ class ActionsTableViewController: BaseViewController, UITableViewDelegate, UITab
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        onShouldShowActionDetails?(indexPath.row)
+        onShouldShowActionDetails?(actions[indexPath.row])
     }
 }
 

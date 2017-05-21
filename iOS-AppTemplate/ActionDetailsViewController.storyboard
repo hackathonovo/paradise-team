@@ -200,7 +200,7 @@
                         <outlet property="call" destination="dzq-ih-R7N" id="lsA-Bo-U8o"/>
                         <outlet property="descriptionScreen" destination="T6x-Wm-ucz" id="1NM-gi-gbS"/>
                         <outlet property="horizontalSlider" destination="gKQ-0Q-hee" id="EsI-lt-Mwb"/>
-                        <outlet property="mapView" destination="dxy-A7-GtE" id="RSC-es-s2Y"/>
+                        <outlet property="mapView" destination="dxy-A7-GtE" id="z7m-2s-jCG"/>
                         <outlet property="messages" destination="HTh-z7-oYV" id="Rq1-fL-LZe"/>
                         <outlet property="statusLabel" destination="TAx-EE-YxY" id="01x-15-I8P"/>
                         <outlet property="titleLabel" destination="3OS-3a-GTo" id="zs1-b9-f6K"/>
