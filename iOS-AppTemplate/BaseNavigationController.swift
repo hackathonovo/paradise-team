@@ -16,7 +16,7 @@ class BaseNavigationController: UINavigationController {
         navigationBar.tintColor = .white
         navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: UIFont.at_title]
     }
-    ///////
+    ///////x
     private func removeShadowFromNavbar() {
         navigationBar.shadowImage = UIImage()
     }
