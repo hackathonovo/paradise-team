@@ -45,7 +45,7 @@ class LobbyCoordinator: Coordinator {
                 
                 self?.showActionDetails(action: action)
             }
-
+            
             return navigationController
             
         default:
@@ -63,7 +63,7 @@ class LobbyCoordinator: Coordinator {
             navigationController.viewControllers = [lobby]
             lobby.navigationBarDisplayMode = .always
             return navigationController
-
+            
         }
         
     }
@@ -121,12 +121,15 @@ class LobbyCoordinator: Coordinator {
         let descriptionViewController = DescriptionViewController.instance()
         descriptionViewController.shouldDismissNavigationController = { [weak self] description in
             
-            self?.makeRequest(users, coords, range, title, description, onComplete: { [weak self] in 
+            self?.makeRequest(users, coords, range, title, description, onComplete: { [weak self] in
+                
                 self?.navigationController.dismiss(animated: true, completion: {})
                 _ = self?.start()
+                
+                
             })
             
-
+            
             
         }
         navigationController.pushViewController(descriptionViewController, animated: true)

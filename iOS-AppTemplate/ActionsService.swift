@@ -66,6 +66,8 @@ class ActionService: NetworkingServiceProtocol {
         
         makeRequest(with: ApiPaths.createAction, method: .post, parameters: params, headers: token, completion: { response in
             
+            onComplete()
+            
             })
        
     }
